@@ -1,14 +1,8 @@
-package edu.mum.model;
+package com.mum.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-
-@Entity
-@Table(name = "Customer")
 public class Customer extends User{
 	
 	public Customer() {
@@ -16,7 +10,6 @@ public class Customer extends User{
 		setUserRole(UserRole.ROLE_CUSTOMER);
 	}
 
-	@OneToMany(mappedBy="customer")
 	private List<Schedule> schedules=new ArrayList<Schedule>();
 
 	public List<Schedule> getSchedules() {
