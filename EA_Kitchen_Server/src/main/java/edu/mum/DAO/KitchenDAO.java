@@ -8,8 +8,9 @@ import org.springframework.stereotype.Repository;
 
 import edu.mum.model.Kitchen;
 
-@Repository
+
 @Transactional
+
 public interface KitchenDAO extends CrudRepository<Kitchen, Integer> {
 
 }
