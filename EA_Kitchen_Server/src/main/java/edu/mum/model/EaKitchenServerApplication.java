@@ -1,4 +1,4 @@
-package edu.mum.application;
+package edu.mum.model;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -13,7 +13,6 @@ import org.springframework.context.annotation.Configuration;
 		"edu.mum.DAO",
 		"edu.mum.model",
 		"edu.mum.service"})
-@SpringBootApplication
 public class EaKitchenServerApplication {
 
 	public static void main(String[] args) {

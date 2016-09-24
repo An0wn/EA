@@ -23,11 +23,11 @@ import edu.mum.model.ScheduleProduce;
 @Controller
 public class FarmerProduceOrdersController {
 
-	@Autowired
+	//@Autowired
 	ScheduleFarmerProduceDAO scheduleFarmerProduceDAO;
-	@Autowired
+	//@Autowired
 	ScheduleProduceDAO scheduleProduceDAO;
-	@Autowired
+	//@Autowired
 	FarmerProduceDAO farmerProduceDAO;
 	
 	//get the scheduleProduce Requests
