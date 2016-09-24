@@ -20,6 +20,10 @@ public class ScheduleFarmerProduceController {
 	@Resource
 	private IScheduleFarmerProduceDAO scheduleFarmerProduceDAO;
 
+	@RequestMapping("/")
+	public String redirectRoot() {
+		return "redirect:/scheduleProducePage";
+	}
 	
 	@RequestMapping(value="/scheduleProducePage", method= RequestMethod.GET)
 	public String getScheduleProducePage(Model model){
