@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: EA_Kitchen_Server
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: klaud
+Built-By: Dewei
 Implementation-Vendor-Id: edu.mum.kitchen
-Build-Jdk: 1.8.0_101
+Build-Jdk: 1.8.0_102
 Implementation-URL: http://projects.spring.io/spring-boot/EA_Kitchen_S
  erver/
 Created-By: Maven Integration for Eclipse
