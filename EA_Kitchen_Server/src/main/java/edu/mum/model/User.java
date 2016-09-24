@@ -3,7 +3,6 @@ package edu.mum.model;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -18,16 +17,11 @@ import javax.persistence.OneToMany;
 public class User {
 
 	@Id @GeneratedValue
-	@Column(name = "userId", nullable = false, updatable = false)
 	private int userId;
 	
-	@Column(name = "username", nullable = false, unique = true)
 	private String username;
-	
-	@Column(name = "password", nullable = false)
 	private String password;
 	
-	@Column(name = "role", nullable = false)
 	@Enumerated(EnumType.STRING)
 	private UserRole userRole;
 	
@@ -63,13 +57,4 @@ public class User {
 	protected void setUserRole(UserRole userRole) {
 		this.userRole = userRole;
 	}
-	
-	@Override
-    public String toString() {
-        return "User{" +
-                "id=" + userId +
-                ", username='" + username +
-                ", role=" + userRole +
-                '}';
-    }
 }
