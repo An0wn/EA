@@ -24,6 +24,7 @@ import edu.mum.service.ScheduleFarmerProduceService;
 @Controller
 public class FarmerProduceOrdersController {
 
+
 	@Autowired
 	ScheduleFarmerProduceService scheduleFarmerProduceService;
 	
@@ -33,9 +34,18 @@ public class FarmerProduceOrdersController {
 	}
 
 	/*@Autowired
+
+	//@Autowired
+	ScheduleFarmerProduceDAO scheduleFarmerProduceDAO;
+	//@Autowired
+
 	ScheduleProduceDAO scheduleProduceDAO;
+
 	@Autowired
 	FarmerProduceDAO farmerProduceDAO;*/
+
+	//@Autowired
+	//FarmerProduceDAO farmerProduceDAO;
 	
 	//get the scheduleProduce Requests
 	@RequestMapping(value="/scheduleProduce/{farmerId}", method = RequestMethod.GET)

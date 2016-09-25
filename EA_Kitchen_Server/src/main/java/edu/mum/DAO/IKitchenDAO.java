@@ -11,6 +11,6 @@ import edu.mum.model.Kitchen;
 
 @Transactional
 
-public interface KitchenDAO extends CrudRepository<Kitchen, Integer> {
+public interface IKitchenDAO extends CrudRepository<Kitchen, Integer> {
 
 }
