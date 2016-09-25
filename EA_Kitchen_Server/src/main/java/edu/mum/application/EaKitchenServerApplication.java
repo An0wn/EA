@@ -9,10 +9,11 @@ import org.springframework.context.annotation.Configuration;
 @EnableAutoConfiguration
 @Configuration
 @ComponentScan(basePackages={
+		"edu.mum.service",
 		"edu.mum.controllers",
 		"edu.mum.DAO",
-		"edu.mum.model",
-		"edu.mum.service"})
+		"edu.mum.model"
+		})
 @SpringBootApplication
 public class EaKitchenServerApplication {
 

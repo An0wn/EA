@@ -2,6 +2,7 @@ package com.mum.controller;
 
 import javax.annotation.Resource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,16 +10,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.mum.DAO.IScheduleFarmerProduceDAO;
 import com.mum.DAO.IScheduleProduceDAO;
+import com.mum.DAO.ScheduleFarmerProduceDAO;
+import com.mum.DAO.ScheduleProduceDAO;
 import com.mum.model.ScheduleFarmerProduce;
 
 @Controller
 public class ScheduleFarmerProduceController {
-
-	@Resource
-	private IScheduleProduceDAO scheduleProduceDAO;
-	
-	@Resource
-	private IScheduleFarmerProduceDAO scheduleFarmerProduceDAO;
 
 	@RequestMapping("/")
 	public String redirectRoot() {
@@ -27,7 +24,7 @@ public class ScheduleFarmerProduceController {
 	
 	@RequestMapping(value="/scheduleProducePage", method= RequestMethod.GET)
 	public String getScheduleProducePage(Model model){
-		model.addAttribute("scheduleProduce", scheduleProduceDAO.getScheduleProduces());
+		model.addAttribute("scheduleProduces", scheduleProduceDAO.getScheduleProduces());
 		return "scheduleProducePage";
 	}
 	
@@ -42,5 +39,27 @@ public class ScheduleFarmerProduceController {
 		model.addAttribute("scheduleFarmerProduce", scheduleFarmerProduceDAO.getScheduleFarmerProduces());
 		return "scheduleFarmerProducePage";
 	}
+	
+	@Autowired
+	private ScheduleProduceDAO scheduleProduceDAO;
+	
+	public ScheduleProduceDAO getScheduleProduceDAO() {
+		return scheduleProduceDAO;
+	}
+
+	public ScheduleFarmerProduceDAO getScheduleFarmerProduceDAO() {
+		return scheduleFarmerProduceDAO;
+	}
+
+	public void setScheduleProduceDAO(ScheduleProduceDAO scheduleProduceDAO) {
+		this.scheduleProduceDAO = scheduleProduceDAO;
+	}
+
+	public void setScheduleFarmerProduceDAO(ScheduleFarmerProduceDAO scheduleFarmerProduceDAO) {
+		this.scheduleFarmerProduceDAO = scheduleFarmerProduceDAO;
+	}
+
+	@Autowired
+	private ScheduleFarmerProduceDAO scheduleFarmerProduceDAO;
 	
 }

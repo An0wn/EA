@@ -2,20 +2,24 @@ package com.mum.service;
 
 import java.util.Collection;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import com.mum.model.ScheduleFarmerProduce;
 import com.mum.model.ScheduleProduce;
 
+@Component
 public class ScheduleFarmerProduceService {
-	private static final String ServiceURL = "http://localhost:8080/EA_Kitchen_Server/rest";
+	private static final String ServiceURL = "http://localhost:8081/EA_Kitchen_Server/rest";
 	private static final String ScheduleProduceListURL = ServiceURL+"/scheduleProduce/";//{farmerId}";
 	private static final String ScheduleFarmerProduceListURL = ServiceURL+"/scheduleFarmerProduce/";//{farmerId}";
 	private static final String ScheduleFarmerProduceURL = ServiceURL+"/scheduleFarmerProduce";
 	
+	@Autowired
 	private RestTemplate restTemplate;
 	public void setRestTemplate(RestTemplate restTemplate) {
 		this.restTemplate = restTemplate;

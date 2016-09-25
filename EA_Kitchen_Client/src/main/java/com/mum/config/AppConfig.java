@@ -1,22 +1,28 @@
 package com.mum.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
+import com.mum.DAO.IScheduleFarmerProduceDAO;
+import com.mum.DAO.IScheduleProduceDAO;
+import com.mum.DAO.ScheduleFarmerProduceDAO;
+import com.mum.DAO.ScheduleProduceDAO;
+
 @Configuration
 public class AppConfig {
 	
-	@Bean
+	/*@Bean
 	public InternalResourceViewResolver internalResourceViewResolver(){
 		InternalResourceViewResolver ins = new InternalResourceViewResolver();
 		ins.setViewClass(JstlView.class);
 		ins.setPrefix("/view/");
 		ins.setSuffix(".jsp");
 		return ins;
-	}
+	}*/
 	/*<bean id="carDao" class="cs544.sample.CarDao" />
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
@@ -35,6 +41,23 @@ public class AppConfig {
 		return rest;
 	}
 	
+	/*@Bean
+	public ScheduleProduceDAO scheduleProduceDAO(){
+		ScheduleProduceDAO scheduleProduceDAO=new ScheduleProduceDAO();
+		return scheduleProduceDAO;
+	}
+	
+	@Bean
+	public ScheduleFarmerProduceDAO scheduleFarmerProduceDAO(){
+		ScheduleFarmerProduceDAO scheduleFarmerProduceDAO=new ScheduleFarmerProduceDAO();
+		return scheduleFarmerProduceDAO;
+	}
+	*/
+	
+/*private IScheduleProduceDAO scheduleProduceDAO;
+	
+	@Autowired
+	private IScheduleFarmerProduceDAO scheduleFarmerProduceDAO;*/
 	
 /*	<bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
 	<property name="messageConverters">

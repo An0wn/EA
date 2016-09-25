@@ -19,16 +19,23 @@ import edu.mum.DAO.ScheduleProduceDAO;
 import edu.mum.model.FarmerProduce;
 import edu.mum.model.ScheduleFarmerProduce;
 import edu.mum.model.ScheduleProduce;
+import edu.mum.service.ScheduleFarmerProduceService;
 
 @Controller
 public class FarmerProduceOrdersController {
 
 	@Autowired
-	ScheduleFarmerProduceDAO scheduleFarmerProduceDAO;
-	@Autowired
+	ScheduleFarmerProduceService scheduleFarmerProduceService;
+	
+
+	public void setScheduleFarmerProduceService(ScheduleFarmerProduceService scheduleFarmerProduceService) {
+		this.scheduleFarmerProduceService = scheduleFarmerProduceService;
+	}
+
+	/*@Autowired
 	ScheduleProduceDAO scheduleProduceDAO;
 	@Autowired
-	FarmerProduceDAO farmerProduceDAO;
+	FarmerProduceDAO farmerProduceDAO;*/
 	
 	//get the scheduleProduce Requests
 	@RequestMapping(value="/scheduleProduce/{farmerId}", method = RequestMethod.GET)
@@ -39,7 +46,7 @@ public class FarmerProduceOrdersController {
 		 * then collect the produceIds in an string 
 		 * and find the requested produces
 		 * */
-		List<FarmerProduce> farmerProduces=farmerProduceDAO.getByFarmerId(farmerId);
+		/*List<FarmerProduce> farmerProduces=farmerProduceDAO.getByFarmerId(farmerId);
 		String queryInValue="";
 		for(int i=0;i<farmerProduces.size();i++){
 			queryInValue+=farmerProduces.get(i).getFarmerProduceId();
@@ -47,14 +54,15 @@ public class FarmerProduceOrdersController {
 				queryInValue+=",";
 		}
 		
-		return scheduleProduceDAO.findByProduceIdIn(queryInValue);
+		return scheduleProduceDAO.findByProduceIdIn(queryInValue);*/
+		return null;
 	}
 	
 	//Add the acceptance
 	@RequestMapping(value="/scheduleFarmerProduce", method = RequestMethod.POST)
 	@ResponseStatus(HttpStatus.CREATED)
 	public void saveScheduleFarmerProduce(@RequestBody ScheduleFarmerProduce scheduleFarmerProduce){
-		scheduleFarmerProduceDAO.save(scheduleFarmerProduce);
+		scheduleFarmerProduceService.save(scheduleFarmerProduce);
 	}
 	
 	//Get the List of Accepted list
@@ -62,7 +70,7 @@ public class FarmerProduceOrdersController {
 	@ResponseStatus(HttpStatus.OK)
 	public @ResponseBody Collection<ScheduleFarmerProduce> getScheduleFarmerProduce(@PathVariable("farmerId") int farmerId){
 		
-		return scheduleFarmerProduceDAO.getScheduleFarmerProduceByFarmerId(farmerId);
+		return scheduleFarmerProduceService.getScheduleFarmerProduceByFarmerId(farmerId);
 		
 	}
 	
