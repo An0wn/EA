@@ -7,9 +7,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.mum.DAO.IScheduleFarmerProduceDAO;
+import com.mum.DAO.IFarmerProduceDAO;
 import com.mum.DAO.IScheduleProduceDAO;
 import com.mum.model.ScheduleFarmerProduce;
+
 
 @Controller
 public class ScheduleFarmerProduceController {
@@ -18,7 +19,7 @@ public class ScheduleFarmerProduceController {
 	private IScheduleProduceDAO scheduleProduceDAO;
 	
 	@Resource
-	private IScheduleFarmerProduceDAO scheduleFarmerProduceDAO;
+	private IFarmerProduceDAO scheduleFarmerProduceDAO;
 
 	@RequestMapping("/")
 	public String redirectRoot() {

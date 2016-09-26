@@ -33,8 +33,12 @@ public class KitchenController {
 	}
 
 	@RequestMapping(value = "/test")
-	public @ResponseBody String test() {
-		return "dewei xiang";
+	public @ResponseBody Collection<Kitchen> test() {
+		Kitchen k=new Kitchen();
+		k.setKitchenName("dewei");
+		kitchenService.save(k);
+		return	(Collection<Kitchen>) kitchenService.findAll();
+		// "dewei xiang";
 	}
 
 	@RequestMapping(value = "/add", method = RequestMethod.POST)

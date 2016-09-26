@@ -1,4 +1,4 @@
-package edu.mum.model;
+package edu.mum.application;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

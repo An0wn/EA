@@ -12,5 +12,5 @@ import edu.mum.model.Kitchen;
 @Transactional
 
 public interface IKitchenDAO extends CrudRepository<Kitchen, Integer> {
-
+	
 }

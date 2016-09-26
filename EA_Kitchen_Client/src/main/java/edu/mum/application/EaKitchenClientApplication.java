@@ -1,8 +1,18 @@
 package edu.mum.application;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
+@EnableAutoConfiguration
+@Configuration
+@ComponentScan(basePackages={
+		"com.mum.controller",
+		"com.mum.DAO",
+		"com.mum.model",
+		"com.mum.service"})
 @SpringBootApplication
 public class EaKitchenClientApplication {
 
