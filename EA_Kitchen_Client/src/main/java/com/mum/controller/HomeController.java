@@ -4,6 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import com.mum.model.User;
+
 @Controller
 public class HomeController {
 
@@ -17,4 +19,15 @@ public class HomeController {
 		model.addAttribute("name", name);
 		return "home";
 	}
+
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public String viewLogin() {
+		return "login";
+	}
+
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	public String loginUser(User user) {
+		return "redirect:/ProducePage";
+	}
+
 }
