@@ -28,3 +28,4 @@ public class SecurityAndAuthenticationConfig extends WebSecurityConfigurerAdapte
 		auth.userDetailsService(userDetailsService).passwordEncoder(new BCryptPasswordEncoder());
 	}
 }
+
