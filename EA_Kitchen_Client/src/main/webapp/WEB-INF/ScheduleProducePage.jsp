@@ -18,7 +18,6 @@
 
 <body>
 
-
 <h1>Produce required</h1>
 
 	<table>
@@ -30,6 +29,8 @@
 		<th>Produce Name</th>
 
 		<th>Quantity</th>
+		
+		<th>Quantity Available</th>
 
 		<th>Deliver By</th>
 
@@ -37,25 +38,27 @@
 
 	</tr>
 
-	<c:forEach var="scheduleProduce" items="${scheduleProduces}">
+	<c:forEach var="scheduleProduceWithQuantity" items="${scheduleProduceWithQuantity}">
 
 	<tr>
 
-		<td>${scheduleProduce.schedule.city},${scheduleProduce.schedule.address}</td>
+		<td>${scheduleProduceWithQuantity.scheduleProduce.schedule.city},${scheduleProduceWithQuantity.scheduleProduce.schedule.address}</td>
 
-		<td>${scheduleProduce.produce.produceName}</td>
+		<td>${scheduleProduceWithQuantity.scheduleProduce.produce.produceName}</td>
 
-		<td>${scheduleProduce.quantity}</td>
+		<td>${scheduleProduceWithQuantity.scheduleProduce.remainingQuantity}</td>
+		
+		<td>${scheduleProduceWithQuantity.availableQuantity}</td>
 
-		<td>${scheduleProduce.date}</td>
+		<td>${scheduleProduceWithQuantity.scheduleProduce.date}</td>
 
 		<%-- <td><a href="scheduleProduceAccept/${scheduleProduce.scheduleProduceId} }">Accept</a></td> --%>
-		<td id="list${scheduleProduce.scheduleProduceId}">
+		<td id="list${scheduleProduceWithQuantity.scheduleProduce.scheduleProduceId}">
 			<form action='/scheduleProduceList' method='post'>
 				<%-- <button type="button" id="accept${scheduleProduce.scheduleProduceId}" onclick="clickAccept(${scheduleProduce.scheduleProduceId})">Accept</button> --%>
 				<%-- <p id="accept${scheduleProduce.scheduleProduceId}" style="display:none;"> --%>
-					<input type='text' name ='quantity' placeholder='quantity'/>
-					<input type='hidden' name = 'scheduleProduceId' value="${scheduleProduce.scheduleProduceId}"/>
+					<input type='number' name ='quantity' placeholder='quantity'  min="1" max="${scheduleProduceWithQuantity.minQuantityAmongThem}"/>
+					<input type='hidden' name = 'scheduleProduceId' value="${scheduleProduceWithQuantity.scheduleProduce.scheduleProduceId}"/>
 					<input type='submit' value='submit'/>
 				<!-- </p> -->
 			</form>

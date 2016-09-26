@@ -1,6 +1,7 @@
 package com.mum.DAO;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -24,7 +25,7 @@ public class ScheduleProduceDAO implements IScheduleProduceDAO{
 	}
 	
 	@Override
-	public Collection<ScheduleProduce> getScheduleProduces() {
+	public List<ScheduleProduce> getScheduleProduces() {
 		// TODO Auto-generated method stub
 		return service.getScheduleProduceList(EaKitchenClientApplication.logginInUserId);
 	}

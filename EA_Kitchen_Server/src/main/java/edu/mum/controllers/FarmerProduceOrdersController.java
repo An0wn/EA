@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +29,6 @@ import edu.mum.model.Produce;
 import edu.mum.model.Schedule;
 import edu.mum.model.ScheduleFarmerProduce;
 import edu.mum.model.ScheduleProduce;
-import edu.mum.service.ScheduleFarmerProduceService;
 
 @Controller
 public class FarmerProduceOrdersController {
@@ -62,7 +63,7 @@ public class FarmerProduceOrdersController {
 		 * */
 		List<FarmerProduce> farmerProduces=farmerProduceDAO.getByFarmerId(farmerId);
 		
-		List<Produce> produces=new ArrayList<>();//farmerProduces.stream().map(map -> map.getProduce()).collect(Collectors.toList());
+		Set<Produce> produces=new HashSet<>();//farmerProduces.stream().map(map -> map.getProduce()).collect(Collectors.toList());
 		
 		for(FarmerProduce farmerProduce:farmerProduces){
 			produces.add(farmerProduce.getProduce());
@@ -72,97 +73,76 @@ public class FarmerProduceOrdersController {
 			return new ArrayList<ScheduleProduce>();
 		List<ScheduleProduce> scheduleProduces=scheduleProduceDAO.findByProduceIdIn(produces);
 		return scheduleProduces;
-		/*Schedule sc=new Schedule();
-		sc.setCity("Acity");
-		sc.setAddress("Address");
-		
-		Schedule sc2=new Schedule();
-		sc2.setCity("Acit2y2");
-		sc2.setAddress("Ad2");
-		
-		Schedule sc3=new Schedule();
-		sc3.setCity("Acity3");
-		sc3.setAddress("Address3");
-		
-		
-		Produce pr=new Produce();
-		pr.setProduceName("ProduceName1");
-		
-		Produce pr2=new Produce();
-		pr2.setProduceName("ProduceName12");
-		
-		Produce pr3=new Produce();
-		pr3.setProduceName("ProduceName13");
-		
-		
-		
-		ScheduleProduce sp=new ScheduleProduce();
-		sp.setDate(new Date());
-		sp.setQuantity(10);
-		sp.setRemainingQuantity(10);
-		sp.setScheduleProduceId(1);
-		sp.setProduce(pr);
-		sp.setSchedule(sc);
-		
-		ScheduleProduce sp1=new ScheduleProduce();
-		sp1.setDate(new Date());
-		sp1.setQuantity(10);
-		sp1.setRemainingQuantity(10);
-		sp1.setScheduleProduceId(2);
-		sp1.setProduce(pr2);
-		sp1.setSchedule(sc);
-		
-		ScheduleProduce sp2=new ScheduleProduce();
-		sp2.setDate(new Date());
-		sp2.setQuantity(10);
-		sp2.setRemainingQuantity(10);
-		sp2.setScheduleProduceId(3);
-		sp2.setProduce(pr3);
-		sp2.setSchedule(sc2);
-		
-		ScheduleProduce sp3=new ScheduleProduce();
-		sp3.setDate(new Date());
-		sp3.setQuantity(10);
-		sp3.setRemainingQuantity(10);
-		sp3.setScheduleProduceId(4);
-		sp3.setProduce(pr);
-		sp3.setSchedule(sc3);
-		
-		List<ScheduleProduce> aList= Arrays.asList(sp,sp1,sp2,sp3);
-		return aList;*/
 	}
 	
 	//Add the acceptance
-	/*@RequestMapping(value="/scheduleFarmerProduce", method = RequestMethod.POST)
-	@ResponseStatus(HttpStatus.CREATED)
-	public void saveScheduleFarmerProduce(@RequestBody ScheduleFarmerProduce scheduleFarmerProduce){
-		scheduleFarmerProduceService.save(scheduleFarmerProduce);
-	}*/
 	@RequestMapping(value="/scheduleFarmerProduce", method = RequestMethod.POST)
 	@ResponseStatus(HttpStatus.CREATED)
-	public void saveScheduleFarmerProduce(@RequestParam("farmerId") String farmerId,@RequestParam("scheduleProduceId") String scheduleProduceId,@RequestParam("quantity") String quantity){
+	public @ResponseBody String saveScheduleFarmerProduce(@RequestParam("farmerId") String farmerId,@RequestParam("scheduleProduceId") String scheduleProduceId,@RequestParam("quantity") String quantity){
 		
-		ScheduleProduce scheduleProduce = scheduleProduceDAO.getByScheduleProduceId(Integer.parseInt(scheduleProduceId));
-		FarmerProduce farmerProduce= farmerProduceDAO.getByFarmerId(Integer.parseInt(farmerId)).get(0);
+		int quantityInt=Integer.parseInt(quantity);
+		int farmerIdInt=Integer.parseInt(farmerId);
+		int scheduleProduceIdInt=Integer.parseInt(scheduleProduceId);
 		
-		ScheduleFarmerProduce sfp = new ScheduleFarmerProduce();
-		sfp.setDeliveryDate(scheduleProduce.getDate());
-		sfp.setFarmerProduce(farmerProduce);
-		sfp.setQuantity(Integer.parseInt(quantity));
-		sfp.setScheduleProduce(scheduleProduce);
 		
-		scheduleFarmerProduceDAO.save(sfp);
+		ScheduleProduce scheduleProduce = scheduleProduceDAO.getByScheduleProduceId(scheduleProduceIdInt);
+		List<FarmerProduce> farmerProduces = farmerProduceDAO.getByFarmerId(farmerIdInt);
+		
+		//Double Check to see if the quanitiy fits or already claimed by others
+		if(scheduleProduce.getRemainingQuantity() == 0){
+			//it means someone else has fulfilled the task 
+			return "Somebody else already agreed to deliver the produce";
+		}
+		
+		//iterate so that the 
+		int quantityNow=quantityInt;
+		for(FarmerProduce farmerProduce:farmerProduces){
+			
+			int quantityToSet=Math.min(quantityNow, farmerProduce.getRemainingQuantity());
+			quantityNow -=quantityToSet;
+			
+			ScheduleFarmerProduce sfp = new ScheduleFarmerProduce();
+			sfp.setDeliveryDate(scheduleProduce.getDate());
+			sfp.setFarmerProduce(farmerProduce);
+			sfp.setQuantity(quantityToSet);
+			sfp.setScheduleProduce(scheduleProduce);
+			
+			
+			scheduleFarmerProduceDAO.save(sfp);
+			//now that the quanitty is accepted we need to change the remaining quantity for both the produce and the scheuldeProduce
+			scheduleProduceDAO.updateRemainingQuantityFor(scheduleProduce.getRemainingQuantity()-quantityToSet, scheduleProduceIdInt);
+			//update the quantity for thefarmerproduce
+			farmerProduceDAO.updateRemainingQuantityFor(farmerProduce.getRemainingQuantity()-quantityToSet, farmerProduce.getFarmerProduceId());
+			
+			//if not equals zero then run the quantity again
+			//if 0, it means its full
+			if(quantityNow==0){
+				break;
+			}
+		}
+		
+				
+		return "";
 	}
 	
 	//Get the List of Accepted list
 	@RequestMapping(value="/scheduleFarmerProduce/{farmerId}", method = RequestMethod.GET)
 	@ResponseStatus(HttpStatus.OK)
-	public @ResponseBody Collection<ScheduleFarmerProduce> getScheduleFarmerProduce(@PathVariable("farmerId") int farmerId){
+	public @ResponseBody List<ScheduleFarmerProduce> getScheduleFarmerProduce(@PathVariable("farmerId") int farmerId){
 		
 		return scheduleFarmerProduceDAO.getScheduleFarmerProduceByFarmerId(farmerId);
 		
 	}
 	
+	//Get the farmerProduce List
+	
+	@RequestMapping(value="/FarmerProduce/{farmerId}", method = RequestMethod.GET)
+	@ResponseStatus(HttpStatus.OK)
+	public @ResponseBody List<FarmerProduce> getFarmerProduce(@PathVariable("farmerId") int farmerId){
+		
+		return farmerProduceDAO.getByFarmerId(farmerId);
+		
+	}
 	
 	
 	

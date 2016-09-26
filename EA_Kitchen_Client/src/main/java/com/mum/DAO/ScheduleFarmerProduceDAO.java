@@ -15,12 +15,12 @@ public class ScheduleFarmerProduceDAO implements IScheduleFarmerProduceDAO{
 	@Autowired
 	ScheduleFarmerProduceService service;
 	
-	@Override
+	/*@Override
 	public void addScheduleFarmerProduce(ScheduleFarmerProduce scheduleFarmerProduce) {
 		// TODO Auto-generated method stub
 		service.saveScheduleFarmerProduce(scheduleFarmerProduce);
 			
-	}
+	}*/
 
 	@Override
 	public Collection<ScheduleFarmerProduce> getScheduleFarmerProduces() {
@@ -29,9 +29,9 @@ public class ScheduleFarmerProduceDAO implements IScheduleFarmerProduceDAO{
 	}
 
 	@Override
-	public void addScheduleFarmerProduceWithIdAndQuantity(int quantity, int scheduleProduceId) {
+	public String addScheduleFarmerProduceWithIdAndQuantity(int quantity, int scheduleProduceId) {
 		// TODO Auto-generated method stub
-		service.saveScheduleFarmerProduceByIdAndQuantity(scheduleProduceId, quantity,EaKitchenClientApplication.logginInUserId);
+		return service.saveScheduleFarmerProduceByIdAndQuantity(scheduleProduceId, quantity,EaKitchenClientApplication.logginInUserId);
 		
 	}
 

@@ -1,6 +1,6 @@
 package com.mum.service;
 
-import java.util.Collection;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
@@ -13,7 +13,7 @@ import com.mum.model.FarmerProduce;
 
 @Component
 public class FarmerProduceService {
-	private static final String ServiceURL = "http://localhost:8080/EA_Kitchen_Server/rest";
+	private static final String ServiceURL = "http://localhost:8081";
 	private static final String FarmerProduceListURL = ServiceURL+"/FarmerProduce/";//{farmerId}";
 	private static final String FarmerProduceURL = ServiceURL+"/FarmerProduce";
 	
@@ -23,9 +23,9 @@ public class FarmerProduceService {
 		this.restTemplate = restTemplate;
 	}
 	
-	public Collection<FarmerProduce> getFarmerProduceList(int farmerId){
-		ParameterizedTypeReference<Collection<FarmerProduce>> typeRef = new ParameterizedTypeReference<Collection<FarmerProduce>>() {};
-		ResponseEntity<Collection<FarmerProduce>> response = restTemplate.exchange(FarmerProduceListURL+farmerId, HttpMethod.GET, null, typeRef);
+	public List<FarmerProduce> getFarmerProduceList(int farmerId){
+		ParameterizedTypeReference<List<FarmerProduce>> typeRef = new ParameterizedTypeReference<List<FarmerProduce>>() {};
+		ResponseEntity<List<FarmerProduce>> response = restTemplate.exchange(FarmerProduceListURL+farmerId, HttpMethod.GET, null, typeRef);
 		return response.getBody();
 	}
 	
