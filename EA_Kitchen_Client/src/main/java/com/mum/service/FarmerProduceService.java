@@ -13,7 +13,7 @@ import com.mum.model.FarmerProduce;
 
 @Component
 public class FarmerProduceService {
-	private static final String ServiceURL = "http://localhost:8080/EA_Kitchen_Server/rest";
+	private static final String ServiceURL = "http://localhost:8081";
 	private static final String FarmerProduceListURL = ServiceURL+"/FarmerProduce/";//{farmerId}";
 	private static final String FarmerProduceURL = ServiceURL+"/FarmerProduce";
 	

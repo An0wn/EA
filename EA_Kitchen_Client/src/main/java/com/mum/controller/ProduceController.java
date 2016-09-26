@@ -14,7 +14,7 @@ public class ProduceController {
 	private IProduceDAO produceDAO;
 	
 	
-	@RequestMapping(value="/ProducePage", method= RequestMethod.POST)
+	@RequestMapping(value="/ProduceList", method= RequestMethod.POST)
 	public String addProducePage(){
 		//UNCOMPLETE
 		return "redirect:/ProducePage";
