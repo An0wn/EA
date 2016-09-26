@@ -9,13 +9,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
+import com.mum.config.AppConfig;
 import com.mum.model.FarmerProduce;
 import com.mum.model.Produce;
 @Component
 public class ProduceService {
-	private static final String ServiceURL = "http://localhost:8081";
-	private static final String ProduceListURL = ServiceURL+"/Produce/";//{farmerId}";
-	private static final String ProduceURL = ServiceURL+"/Produce";
+	//private static final String ServiceURL = "http://localhost:8081";
+	private static final String ProduceListURL =  AppConfig.ServerUrl+"/Produce/";//{farmerId}";
+	private static final String ProduceURL =  AppConfig.ServerUrl+"/Produce";
 	
 	@Autowired
 	private RestTemplate restTemplate;
