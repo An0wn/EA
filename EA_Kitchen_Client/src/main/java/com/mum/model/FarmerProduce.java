@@ -8,18 +8,12 @@ import java.util.List;
 public class FarmerProduce {
 
 	private int farmerProduceId;
-	
 	private Farmer farmer;
-	
 	private Produce produce;
-	
 	private int quantity;
 	private int remainingQuantity;
-	
 	private Date date;
-	
 	private List<ScheduleFarmerProduce> scheduleFarmerProduces = new ArrayList<ScheduleFarmerProduce>();
-	
 
 	public List<ScheduleFarmerProduce> getScheduleFarmerProduces() {
 		return scheduleFarmerProduces;

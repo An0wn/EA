@@ -5,18 +5,13 @@ import java.util.List;
 
 public class Produce {
 
-	
 	private int produceId;
-	
 	private String produceName;
 	private double producePrice;
 	
-	
 	private List<FarmerProduce> farmerProduces=new ArrayList<FarmerProduce>();
 	
-	
 	private List<ScheduleProduce> scheduleProduces=new ArrayList<ScheduleProduce>();
-
 	
 	public List<ScheduleProduce> getScheduleProduces() {
 		return scheduleProduces;

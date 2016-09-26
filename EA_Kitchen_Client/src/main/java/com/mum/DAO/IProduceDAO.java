@@ -1,9 +1,9 @@
 package com.mum.DAO;
 
-import java.util.Collection;
+import java.util.List;
 
 import com.mum.model.Produce;
 
 public interface IProduceDAO {
-	Collection<Produce> getProduces();
+	List<Produce> getProduces();
 }

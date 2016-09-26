@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import edu.mum.model.FarmerProduce;
+import edu.mum.model.ScheduleProduce;
 
 //@Transactional
 @Repository
@@ -19,6 +20,8 @@ public interface FarmerProduceDAO extends CrudRepository<FarmerProduce, Long>{
 
 	@Query("SELECT fp FROM FarmerProduce fp WHERE fp.farmer.userId=? AND fp.remainingQuantity > 0 ORDER BY fp.date ASC")
 	List<FarmerProduce> getByFarmerId(int farmerId);
+	
+	public FarmerProduce getByFarmerProduceId(int farmerProduceId);
 	
 	@Modifying
 	@Transactional
