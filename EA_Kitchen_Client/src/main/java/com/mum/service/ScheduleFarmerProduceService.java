@@ -14,6 +14,7 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
+import com.mum.config.AppConfig;
 import com.mum.model.Produce;
 import com.mum.model.Schedule;
 import com.mum.model.ScheduleFarmerProduce;
@@ -21,9 +22,9 @@ import com.mum.model.ScheduleProduce;
 
 @Component
 public class ScheduleFarmerProduceService {
-	private static final String ServiceURL = "http://localhost:8081";
-	private static final String ScheduleProduceURL = ServiceURL+"/scheduleProduce";//{farmerId}";
-	private static final String ScheduleFarmerProduceURL = ServiceURL+"/scheduleFarmerProduce";//{farmerId}";
+	//private static final String ServiceURL = "http://localhost:8081";
+	private static final String ScheduleProduceURL =  AppConfig.ServerUrl+"/scheduleProduce";//{farmerId}";
+	private static final String ScheduleFarmerProduceURL =  AppConfig.ServerUrl+"/scheduleFarmerProduce";//{farmerId}";
 	
 	@Autowired
 	private RestTemplate restTemplate;

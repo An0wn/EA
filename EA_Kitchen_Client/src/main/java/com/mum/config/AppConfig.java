@@ -15,6 +15,7 @@ import com.mum.DAO.ScheduleProduceDAO;
 @Configuration
 public class AppConfig {
 	
+	public static String ServerUrl="http://localhost:8081";
 	/*@Bean
 	public InternalResourceViewResolver internalResourceViewResolver(){
 		InternalResourceViewResolver ins = new InternalResourceViewResolver();
