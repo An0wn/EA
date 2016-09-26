@@ -12,7 +12,7 @@ import com.mum.service.ScheduleFarmerProduceService;
 @Component
 public class ScheduleProduceDAO implements IScheduleProduceDAO{
 
-	/*@Autowired
+	@Autowired
 	ScheduleFarmerProduceService service;
 	
 	public ScheduleFarmerProduceService getService() {
@@ -21,13 +21,12 @@ public class ScheduleProduceDAO implements IScheduleProduceDAO{
 
 	public void setService(ScheduleFarmerProduceService service) {
 		this.service = service;
-	}*/
+	}
 	
 	@Override
 	public Collection<ScheduleProduce> getScheduleProduces() {
 		// TODO Auto-generated method stub
-		return null;
-		//return service.getScheduleProduceList(EaKitchenClientApplication.logginInUserId);
+		return service.getScheduleProduceList(EaKitchenClientApplication.logginInUserId);
 	}
 
 }

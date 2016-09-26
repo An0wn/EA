@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import edu.mum.model.ScheduleFarmerProduce;
 
+@Repository
 public interface ScheduleFarmerProduceDAO extends JpaRepository<ScheduleFarmerProduce, Long>{
 
 	public ScheduleFarmerProduce save(ScheduleFarmerProduce scheduleFarmerProduce);

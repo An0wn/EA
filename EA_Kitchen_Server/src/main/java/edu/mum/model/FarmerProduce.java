@@ -37,10 +37,10 @@ public class FarmerProduce {
 	private List<ScheduleFarmerProduce> scheduleFarmerProduces = new ArrayList<ScheduleFarmerProduce>();
 	
 
-	public List<ScheduleFarmerProduce> getScheduleFarmerProduces() {
+	/*public List<ScheduleFarmerProduce> getScheduleFarmerProduces() {
 		return scheduleFarmerProduces;
 	}
-
+*/
 	public void setScheduleFarmerProduces(List<ScheduleFarmerProduce> scheduleFarmerProduces) {
 		this.scheduleFarmerProduces = scheduleFarmerProduces;
 	}

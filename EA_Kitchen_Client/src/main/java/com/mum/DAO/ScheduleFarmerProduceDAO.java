@@ -28,4 +28,11 @@ public class ScheduleFarmerProduceDAO implements IScheduleFarmerProduceDAO{
 		return service.getScheduleFarmerProduceList(EaKitchenClientApplication.logginInUserId);
 	}
 
+	@Override
+	public void addScheduleFarmerProduceWithIdAndQuantity(int quantity, int scheduleProduceId) {
+		// TODO Auto-generated method stub
+		service.saveScheduleFarmerProduceByIdAndQuantity(scheduleProduceId, quantity,EaKitchenClientApplication.logginInUserId);
+		
+	}
+
 }

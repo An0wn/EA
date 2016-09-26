@@ -15,6 +15,9 @@ import edu.mum.model.FarmerProduce;
 @Repository
 public interface FarmerProduceDAO extends CrudRepository<FarmerProduce, Long>{
 
-	@Query("SELECT fp FROM FarmerProduce WHERE fp.farmer.userId=? AND fp.remainingQuantity > 0")
+	@Query("SELECT fp FROM FarmerProduce fp WHERE fp.farmer.userId=? AND fp.remainingQuantity > 0 ORDER BY fp.date ASC")
 	List<FarmerProduce> getByFarmerId(int farmerId);
+	
+	/*@Query("SELECT fp FROM FarmerProduce WHERE fp.farmer.userId=? AND fp.remainingQuantity > 0 ORDER BY date ASC LIMIT 1")
+	FarmerProduce getAByFarmerIdOrderByDateASC(int farmerId);*/
 }

@@ -18,9 +18,9 @@ public class Customer extends User{
 	@OneToMany(mappedBy="customer")
 	private List<Schedule> schedules=new ArrayList<Schedule>();
 
-	public List<Schedule> getSchedules() {
+	/*public List<Schedule> getSchedules() {
 		return schedules;
-	}
+	}*/
 
 	public void setSchedules(List<Schedule> schedules) {
 		this.schedules = schedules;

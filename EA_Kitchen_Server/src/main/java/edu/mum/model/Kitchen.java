@@ -32,9 +32,9 @@ public class Kitchen {
 	public void setKitchenType(KitchenType kitchenType) {
 		this.kitchenType = kitchenType;
 	}
-	public List<Schedule> getSchedules() {
+	/*public List<Schedule> getSchedules() {
 		return schedules;
-	}
+	}*/
 	public void setSchedules(List<Schedule> schedules) {
 		this.schedules = schedules;
 	}

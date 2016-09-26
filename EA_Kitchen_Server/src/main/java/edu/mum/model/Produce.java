@@ -24,15 +24,15 @@ public class Produce {
 	private List<ScheduleProduce> scheduleProduces=new ArrayList<ScheduleProduce>();
 
 	
-	public List<ScheduleProduce> getScheduleProduces() {
+	/*public List<ScheduleProduce> getScheduleProduces() {
 		return scheduleProduces;
-	}
+	}*/
 	public void setScheduleProduces(List<ScheduleProduce> scheduleProduces) {
 		this.scheduleProduces = scheduleProduces;
 	}
-	public List<FarmerProduce> getFarmerProduces() {
+	/*public List<FarmerProduce> getFarmerProduces() {
 		return farmerProduces;
-	}
+	}*/
 	public void setFarmerProduces(List<FarmerProduce> farmerProduces) {
 		this.farmerProduces = farmerProduces;
 	}

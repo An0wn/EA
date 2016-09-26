@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @EnableAutoConfiguration
 @Configuration
@@ -13,6 +14,7 @@ import org.springframework.context.annotation.Configuration;
 		"edu.mum.DAO",
 		"edu.mum.model",
 		"edu.mum.service"})
+@EnableJpaRepositories("edu.mum.DAO")
 public class EaKitchenServerApplication {
 
 	public static void main(String[] args) {

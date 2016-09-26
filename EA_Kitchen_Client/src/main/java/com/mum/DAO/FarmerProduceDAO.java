@@ -27,5 +27,12 @@ public class FarmerProduceDAO implements IFarmerProduceDAO {
 	public Collection<FarmerProduce> getFarmerProduces() {
 		return service.getFarmerProduceList(EaKitchenClientApplication.logginInUserId);
 	}
+
+	//Ban Added
+	/*@Override
+	public FarmerProduce getFarmerProduceByProduceId(int produceId) {
+		// TODO Auto-generated method stub
+		return service.getFarmerProduceByProduceId(produceId);
+	}*/
 	
 }

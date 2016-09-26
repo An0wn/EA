@@ -33,4 +33,9 @@ public class FarmerProduceService {
 		restTemplate.postForObject(FarmerProduceURL, FarmerProduce, FarmerProduce.class);
 	}
 	
-}
+	/*//Ban Added
+	public FarmerProduce getFarmerProduceByProduceId(int produceId){
+		return restTemplate.postForObject(FarmerProduceListURL+"{produceId}", produceId, FarmerProduce.class);
+	}
+	//End Ban Added
+*/}

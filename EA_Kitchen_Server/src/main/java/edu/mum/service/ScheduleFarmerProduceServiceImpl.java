@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 import edu.mum.DAO.ScheduleFarmerProduceDAO;
 import edu.mum.model.ScheduleFarmerProduce;
 
-@Service
+//@Service
 public class ScheduleFarmerProduceServiceImpl implements ScheduleFarmerProduceService{
 
-	@Autowired
+	//@Autowired
     private ScheduleFarmerProduceDAO scheduleFarmerProduceDAO;
     public void setScheduleFarmerProduceDAO(ScheduleFarmerProduceDAO scheduleFarmerProduceDAO) {
 		this.scheduleFarmerProduceDAO = scheduleFarmerProduceDAO;

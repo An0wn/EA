@@ -11,7 +11,7 @@ public class HomeController {
 		// TODO Auto-generated constructor stub
 	}
 
-	@RequestMapping("/home")
+	@RequestMapping("/homeI")
 	public String greeting(@RequestParam(value = "name", required = false, defaultValue = "ABCD Team ff") String name,
 			Model model) {
 		model.addAttribute("name", name);
