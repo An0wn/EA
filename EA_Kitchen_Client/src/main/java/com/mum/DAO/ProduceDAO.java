@@ -1,6 +1,6 @@
 package com.mum.DAO;
 
-import java.util.Collection;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -24,8 +24,14 @@ public class ProduceDAO implements IProduceDAO {
 	}
 
 	@Override
-	public Collection<Produce> getProduces() {
-		return service.getProduceList(EaKitchenClientApplication.logginInUserId);
+	public List<Produce> getProduces() {
+		return service.getProduceList();
+	}
+
+	@Override
+	public String addFarmerProduceWithQuantityAndId(int produceId, int quantity) {
+		// TODO Auto-generated method stub
+		return service.saveFarmerProduce(produceId, quantity, EaKitchenClientApplication.logginInUserId);
 	}
 
 }
