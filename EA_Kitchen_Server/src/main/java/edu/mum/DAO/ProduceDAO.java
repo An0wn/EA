@@ -20,5 +20,7 @@ public interface ProduceDAO extends JpaRepository<Produce, Long>{
 	
 	@Query("SELECT p FROM Produce p")
 	public List<Produce> getAll();
+	
+	public Produce getByProduceId(int produceId);
 
 }

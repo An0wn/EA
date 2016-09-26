@@ -12,13 +12,21 @@
 	<table>
 		<tr>
 			<th>Produce Name</th>
-			<td>Price</td>
+			<th>Price</th>
+			<th>Action</th>
 		</tr>
 		<c:forEach var="Produce"
 			items="${Produces}">
 			<tr>
 				<td>${Produce.produceName}</td>
 				<td>${Produce.producePrice}</td>
+				<td>
+					<form action="/produceList" method="post">
+						<input type="number" name="quantity" min="1"/>
+						<input type="hidden" name="produceId" value="${Produce.produceId}"/>
+						<input type="submit" value="Add"/>
+					</form>
+				</td>
 			</tr>
 		</c:forEach>
 	</table>

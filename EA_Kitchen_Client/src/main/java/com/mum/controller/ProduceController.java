@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.mum.DAO.IProduceDAO;
 import com.mum.DAO.ProduceDAO;
@@ -22,9 +23,10 @@ public class ProduceController {
 	}
 	
 	@RequestMapping(value="/produceList", method= RequestMethod.POST)
-	public String addProducePage(Model model){
-		model.addAttribute("Produces", produceDAO.getProduces());
-		return "redirect:/ProducePage";
+	public String addProducePage(@RequestParam("quantity") int quantity,@RequestParam("produceId") int produceId){
+	
+		produceDAO.addFarmerProduceWithQuantityAndId(produceId, quantity);
+		return "redirect:/farmerProduceList";
 	}
 	
 }

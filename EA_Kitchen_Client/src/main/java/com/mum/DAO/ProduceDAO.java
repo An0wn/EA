@@ -28,4 +28,10 @@ public class ProduceDAO implements IProduceDAO {
 		return service.getProduceList();
 	}
 
+	@Override
+	public String addFarmerProduceWithQuantityAndId(int produceId, int quantity) {
+		// TODO Auto-generated method stub
+		return service.saveFarmerProduce(produceId, quantity, EaKitchenClientApplication.logginInUserId);
+	}
+
 }
