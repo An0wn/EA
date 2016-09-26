@@ -21,10 +21,10 @@ public class Utensil {
 	@OneToMany(mappedBy="utensil")
 	private List<ScheduleUtensils> scheduleUtensils = new ArrayList<ScheduleUtensils>();
 
-	public List<ScheduleUtensils> getScheduleUtensils() {
+	/*public List<ScheduleUtensils> getScheduleUtensils() {
 		return scheduleUtensils;
 	}
-
+*/
 	public void setScheduleUtensils(List<ScheduleUtensils> scheduleUtensils) {
 		this.scheduleUtensils = scheduleUtensils;
 	}

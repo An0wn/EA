@@ -2,46 +2,57 @@ package com.mum.controller;
 
 import javax.annotation.Resource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
-import com.mum.DAO.IFarmerProduceDAO;
+import com.mum.DAO.FarmerProduceDAO;
 import com.mum.DAO.IScheduleProduceDAO;
+import com.mum.DAO.ScheduleFarmerProduceDAO;
+import com.mum.DAO.ScheduleProduceDAO;
 import com.mum.model.ScheduleFarmerProduce;
+import com.mum.model.ScheduleProduce;
 
 
 @Controller
 public class ScheduleFarmerProduceController {
 
-	@Resource
-	private IScheduleProduceDAO scheduleProduceDAO;
+	@Autowired
+	private ScheduleProduceDAO scheduleProduceDAO;
 	
-	@Resource
-	private IFarmerProduceDAO scheduleFarmerProduceDAO;
-
+	@Autowired
+	private ScheduleFarmerProduceDAO scheduleFarmerProduceDAO;
+	
+	@Autowired
+	private FarmerProduceDAO farmerProduceDAO;
+	
 	@RequestMapping("/")
 	public String redirectRoot() {
-		return "redirect:/scheduleProducePage";
+		return "redirect:/scheduleProduceList";
 	}
 	
-	@RequestMapping(value="/scheduleProducePage", method= RequestMethod.GET)
+	@RequestMapping(value="/scheduleProduceList", method= RequestMethod.GET)
 	public String getScheduleProducePage(Model model){
-		model.addAttribute("scheduleProduce", scheduleProduceDAO.getScheduleProduces());
-		return "scheduleProducePage";
+		model.addAttribute("scheduleProduces", scheduleProduceDAO.getScheduleProduces());
+		return "ScheduleProducePage";
 	}
 	
-	@RequestMapping(value="/scheduleProducePage", method= RequestMethod.POST)
-	public String addScheduleProducePage(ScheduleFarmerProduce scheduleFarmerProduce){
-		scheduleFarmerProduceDAO.addScheduleFarmerProduce(scheduleFarmerProduce);
-		return "redirect:/scheduleProducePage";
+	@RequestMapping(value="/scheduleProduceList", method= RequestMethod.POST)
+	public String addScheduleProducePage(@RequestParam("quantity") int quantity,@RequestParam("scheduleProduceId") int scheduleProduceId){
+		
+		scheduleFarmerProduceDAO.addScheduleFarmerProduceWithIdAndQuantity(quantity, scheduleProduceId);
+		return "redirect:/scheduleProduceList";
 	}
 	
-	@RequestMapping(value="/scheduleFarmerProducePage", method= RequestMethod.GET)
+	@RequestMapping(value="/scheduleFarmerProduceList", method= RequestMethod.GET)
 	public String getScheduleFarmerProducePage(Model model){
-		model.addAttribute("scheduleFarmerProduce", scheduleFarmerProduceDAO.getScheduleFarmerProduces());
-		return "scheduleFarmerProducePage";
+		model.addAttribute("scheduleFarmerProduces", scheduleFarmerProduceDAO.getScheduleFarmerProduces());
+		return "ScheduleFarmerProducePage";
 	}
+	
+	
 	
 }

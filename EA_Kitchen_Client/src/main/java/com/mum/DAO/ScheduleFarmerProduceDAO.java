@@ -3,12 +3,13 @@ package com.mum.DAO;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+import com.mum.EaKitchenClientApplication;
 import com.mum.model.ScheduleFarmerProduce;
 import com.mum.service.ScheduleFarmerProduceService;
 
-import edu.mum.application.EaKitchenClientApplication;
-
+@Component
 public class ScheduleFarmerProduceDAO implements IScheduleFarmerProduceDAO{
 
 	@Autowired
@@ -25,6 +26,13 @@ public class ScheduleFarmerProduceDAO implements IScheduleFarmerProduceDAO{
 	public Collection<ScheduleFarmerProduce> getScheduleFarmerProduces() {
 		// TODO Auto-generated method stub
 		return service.getScheduleFarmerProduceList(EaKitchenClientApplication.logginInUserId);
+	}
+
+	@Override
+	public void addScheduleFarmerProduceWithIdAndQuantity(int quantity, int scheduleProduceId) {
+		// TODO Auto-generated method stub
+		service.saveScheduleFarmerProduceByIdAndQuantity(scheduleProduceId, quantity,EaKitchenClientApplication.logginInUserId);
+		
 	}
 
 }

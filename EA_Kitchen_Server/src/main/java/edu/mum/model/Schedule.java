@@ -19,6 +19,25 @@ public class Schedule {
 	@Id @GeneratedValue
 	private int scheduleId;
 	
+	private String address;
+	private String city;
+	
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
 	@ManyToOne
 	@JoinColumn(name="userId")
 	private Customer customer;
@@ -79,17 +98,17 @@ public class Schedule {
 		this.endDate = endDate;
 	}
 
-	public List<ScheduleUtensils> getScheduleUtensils() {
+	/*public List<ScheduleUtensils> getScheduleUtensils() {
 		return scheduleUtensils;
-	}
+	}*/
 
 	public void setScheduleUtensils(List<ScheduleUtensils> scheduleUtensils) {
 		this.scheduleUtensils = scheduleUtensils;
 	}
 
-	public List<ScheduleProduce> getScheduleProduces() {
+	/*public List<ScheduleProduce> getScheduleProduces() {
 		return scheduleProduces;
-	}
+	}*/
 
 	public void setScheduleProduces(List<ScheduleProduce> scheduleProduces) {
 		this.scheduleProduces = scheduleProduces;

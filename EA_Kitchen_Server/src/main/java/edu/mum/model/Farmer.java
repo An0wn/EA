@@ -16,9 +16,9 @@ public class Farmer extends User{
 	@OneToMany(mappedBy="farmer")
 	private List<FarmerProduce> farmerProduces=new ArrayList<FarmerProduce>();
 
-	public List<FarmerProduce> getFarmerProduces() {
+	/*public List<FarmerProduce> getFarmerProduces() {
 		return farmerProduces;
-	}
+	}*/
 
 	public void setFarmerProduces(List<FarmerProduce> farmerProduces) {
 		this.farmerProduces = farmerProduces;
