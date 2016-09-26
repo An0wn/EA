@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: EA_Kitchen_Client
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: bandeshor
+Built-By: klaud
 Implementation-Vendor-Id: edu.mum.kitchen
-Build-Jdk: 1.8.0_77
+Build-Jdk: 1.8.0_101
 Implementation-URL: http://projects.spring.io/spring-boot/EA_Kitchen_C
  lient/
 Created-By: Maven Integration for Eclipse

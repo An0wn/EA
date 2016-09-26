@@ -12,9 +12,10 @@ import com.mum.model.Produce;
 
 @Component
 public class ProduceService {
-	private static final String ServiceURL = "http://localhost:8081";
-	private static final String ProduceListURL = ServiceURL+"/produce";//{farmerId}";
-	private static final String ProduceURL = ServiceURL+"/produce/";
+
+	//private static final String ServiceURL = "http://localhost:8081";
+	private static final String ProduceListURL =  AppConfig.ServerUrl+"/Produce/";//{farmerId}";
+	private static final String ProduceURL =  AppConfig.ServerUrl+"/Produce";
 	
 	@Autowired
 	private RestTemplate restTemplate;

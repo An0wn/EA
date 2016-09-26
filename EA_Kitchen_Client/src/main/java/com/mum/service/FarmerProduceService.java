@@ -13,9 +13,9 @@ import com.mum.model.FarmerProduce;
 
 @Component
 public class FarmerProduceService {
-	private static final String ServiceURL = "http://localhost:8081";
-	private static final String FarmerProduceListURL = ServiceURL+"/farmerProduce/";//{farmerId}";
-	private static final String FarmerProduceURL = ServiceURL+"/farmerProduce";
+	
+	private static final String FarmerProduceListURL = AppConfig.ServerUrl+"/farmerProduce/";//{farmerId}";
+	private static final String FarmerProduceURL = AppConfig.ServerUrl+"/farmerProduce";
 	
 	@Autowired
 	private RestTemplate restTemplate;
