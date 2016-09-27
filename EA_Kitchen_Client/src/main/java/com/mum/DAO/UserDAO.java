@@ -1,4 +1,4 @@
-package com.mum.DAO;
+/*package com.mum.DAO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -32,3 +32,4 @@ public class UserDAO implements IUserDAO {
 		return false;
 	}
 }
+*/

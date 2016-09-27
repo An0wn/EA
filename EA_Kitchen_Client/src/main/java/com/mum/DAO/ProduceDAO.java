@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.mum.EaKitchenClientApplication;
+import com.mum.config.EaKitchenClientApplication;
 import com.mum.model.Produce;
 import com.mum.service.ProduceService;
 

@@ -29,10 +29,10 @@ public class ScheduleFarmerProduceController {
 	@Autowired
 	private ScheduleFarmerProduceDAO scheduleFarmerProduceDAO;
 	
-	@RequestMapping("/")
-	public String redirectRoot() {
-		return "redirect:/scheduleProduceList";
-	}
+//	@RequestMapping("/")
+//	public String redirectRoot() {
+//		return "redirect:/scheduleProduceList";
+//	}
 	
 	@RequestMapping(value="/scheduleProduceList", method= RequestMethod.GET)
 	public String getScheduleProducePage(Model model){
