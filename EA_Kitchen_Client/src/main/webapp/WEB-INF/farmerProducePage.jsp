@@ -6,30 +6,41 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Farmer Produce List</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
 </head>
 <body>
-	<h1>FARMER required</h1>
-	<table>
-		<tr>
-			<th>Farmer name</th>
-			<th>Quantity</th>
-			<th>Quantity Available</th>
-			<th>Produce Name</th>
-			<td>Price</td>
-		</tr>
-		<c:forEach var="farmerProduce"
-			items="${farmerProduces}">
-			<tr>
-				<td>${farmerProduce.farmer.username}</td>
-				<td>${farmerProduce.quantity}</td>
-				<td>${farmerProduce.remainingQuantity}</td>
-				<td>${farmerProduce.produce.produceName}</td>
-				<td>${farmerProduce.date}</td>
-				
-				<%-- <td><a href="scheduleProduceAccept/${scheduleProduce.scheduleProduceId} }">Accept</a></td> --%>
-			</tr>
-		</c:forEach>
-	</table>
-	<a href="/farmerProducesList">List of accepted produces</a>
+	<h1>Farmer Produce</h1>
+	<!-- <a href="add" class="btn btn-info">Add kitchen</a> -->
+	<table class="table table-striped">
+		<thead>
+			<table>
+				<tr>
+					<th>Farmer name</th>
+					<th>Quantity</th>
+					<th>Quantity Available</th>
+					<th>Produce Name</th>
+					<th>Price</th>
+				</tr>
+				</thead>
+					<c:forEach var="farmerProduce" items="${farmerProduces}">
+						<tr>
+							<td>${farmerProduce.farmer.username}</td>
+							<td>${farmerProduce.quantity}</td>
+							<td>${farmerProduce.remainingQuantity}</td>
+							<td>${farmerProduce.produce.produceName}</td>
+							<td>${farmerProduce.date}</td>
+
+							<%-- <td><a href="scheduleProduceAccept/${scheduleProduce.scheduleProduceId} }">Accept</a></td> --%>
+						</tr>
+					</c:forEach>
+			</table>
+			<!-- <a href="/farmerProducesList">List of accepted produces</a> -->
+			<script
+				src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+				integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+				crossorigin="anonymous"></script>
 </body>
 </html>
