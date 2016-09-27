@@ -15,19 +15,19 @@ import javax.persistence.InheritanceType;
 import javax.persistence.OneToMany;
 
 @Entity
-@Inheritance(strategy=InheritanceType.JOINED)
+@Inheritance(strategy = InheritanceType.JOINED)
 public class User {
 
-	@Id @GeneratedValue
+	@Id
+	@GeneratedValue
 	private int userId;
-	
+
 	private String username;
 	private String password;
-	
+
 	@Enumerated(EnumType.STRING)
 	private UserRole userRole;
-	
-	
+
 	public int getUserId() {
 		return userId;
 	}
@@ -56,8 +56,17 @@ public class User {
 		return userRole;
 	}
 
-	protected void setUserRole(UserRole userRole) {
+	public void setUserRole(UserRole userRole) {
 		this.userRole = userRole;
 	}
-}
 
+	public User(User u) {
+		this.userId = u.userId;
+		this.username = u.username;
+		this.password = u.password;
+		this.userRole = u.userRole;
+	}
+
+	public User() {
+	}
+}

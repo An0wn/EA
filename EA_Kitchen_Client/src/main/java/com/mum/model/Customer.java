@@ -19,4 +19,9 @@ public class Customer extends User{
 	public void setSchedules(List<Schedule> schedules) {
 		this.schedules = schedules;
 	}
+	
+	public Customer(User user) {
+		// TODO Auto-generated constructor stub
+		super(user);
+	}
 }
