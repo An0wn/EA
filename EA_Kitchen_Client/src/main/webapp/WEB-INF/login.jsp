@@ -7,25 +7,28 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/login" method="post">
-		<input type="hidden" name="${_csrf.parameterName}"
-			value="${_csrf.token}" />
-		<div>
-			<label for="userName">User Name</label> <input type="text"
-				name="username" id="username" required autofocus>
-		</div>
-		<div>
-			<label for="password">Password</label> <input type="password"
-				name="password" id="password" required>
-		</div>
-		<!--  <div>
-        <label for="remember-me">Remember me</label>
-        <input type="checkbox" name="remember-me" id="remember-me">
-    </div> -->
-		<button type="submit">Sign in</button>
-	</form>
 
-<!-- 	<#if error.isPresent()>
+	<div style="margin: 0 auto; width: 300px">
+		<br />
+		<br />
+		<h2>KBNB Kitchen</h2>
+		<br />
+		<br />
+		<form action="/login" method="post">
+			<div style="float:left; padding:8px 0px">
+				<label for="userName">User Name</label> <input type="text"
+					name="username" id="username" required autofocus>
+			</div>
+			<br />
+			<div style="float:left; padding:8px 0px">
+				<label for="password">Password</label> <input type="password"
+					name="password" id="password" required>
+			</div><br />
+			<div style="float:left; padding:8px 0px"><button style="margin-left:74px" type="submit">Sign in</button></div>
+		</form>
+	</div>
+
+	<!-- 	<#if error.isPresent()>
 	<p>The email or password you have entered is invalid, try again.</p>
 	</#if> -->
 </body>

@@ -1,5 +1,5 @@
 
-<jsp:include page="header.jsp" flush="true">
+<jsp:include page="Customerheader.jsp" flush="true">
 	<jsp:param name="title" value=" Search Kitchen List" />
 </jsp:include>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>

@@ -1662,6 +1662,7 @@ java.lang.IllegalArgumentException: Not enough variable values available to expa
 2016-09-27 17:17:43.889  INFO 484 --- [http-nio-8080-exec-1] com.mum.controller.ProduceController     : Method getProducePage has been called
 2016-09-27 17:17:44.455  INFO 484 --- [http-nio-8080-exec-2] c.m.controller.FarmerProduceController   : Method getFarmerProducePage has been called
 >>>>>>> branch 'master' of https://github.com/Klaudioz/EA.git
+<<<<<<< HEAD
 >>>>>>> branch 'master' of https://github.com/Klaudioz/EA.git
 2016-09-27 17:41:43.195  INFO 8164 --- [main] c.mum.config.EaKitchenClientApplication  : Starting EaKitchenClientApplication on DESKTOP-B1IAO1L with PID 8164 (F:\Study\EA\Project\EA\EA_Kitchen_Client\target\classes started by bandeshor in F:\Study\EA\Project\EA\EA_Kitchen_Client)
 2016-09-27 17:41:43.198  INFO 8164 --- [main] c.mum.config.EaKitchenClientApplication  : No active profile set, falling back to default profiles: default
@@ -2271,3 +2272,6 @@ org.apache.jasper.JasperException: /WEB-INF/AddFoodToSchedule.jsp (line: 49, col
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.5.jar:8.5.5]
 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_77]
 
+=======
+2016-09-27 17:45:35.143  INFO 14096 --- [http-nio-8080-exec-4] com.mum.controller.ProduceController     : Method getProducePage has been called
+>>>>>>> branch 'master' of https://github.com/Klaudioz/EA.git
