@@ -6,29 +6,40 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Produce List</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
 </head>
 <body>
-	<h1>PRODUCE required</h1>
-	<table>
-		<tr>
-			<th>Produce Name</th>
-			<th>Price</th>
-			<th>Action</th>
-		</tr>
-		<c:forEach var="Produce"
-			items="${Produces}">
-			<tr>
-				<td>${Produce.produceName}</td>
-				<td>${Produce.producePrice}</td>
-				<td>
-					<form action="/produceList" method="post">
-						<input type="number" name="quantity" min="1"/>
-						<input type="hidden" name="produceId" value="${Produce.produceId}"/>
-						<input type="submit" value="Add"/>
-					</form>
-				</td>
-			</tr>
-		</c:forEach>
-	</table>
+	<h1>Produce</h1>
+	<!-- <a href="add" class="btn btn-info">Add kitchen</a> -->
+	<table class="table table-striped">
+		<thead>
+			<table>
+				<tr>
+					<th>Produce Name</th>
+					<th>Price</th>
+					<th>Action</th>
+				</tr>
+				</thead>
+					<c:forEach var="Produce" items="${Produces}">
+						<tr>
+							<td>${Produce.produceName}</td>
+							<td>${Produce.producePrice}</td>
+							<td>
+								<form action="/produceList" method="post">
+									<input type="number" name="quantity" min="1" /> <input
+										type="hidden" name="produceId" value="${Produce.produceId}" />
+									<input type="submit" value="Add" />
+								</form>
+							</td>
+						</tr>
+					</c:forEach>
+			</table>
+			<script
+				src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+				integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+				crossorigin="anonymous"></script>
 </body>
 </html>
