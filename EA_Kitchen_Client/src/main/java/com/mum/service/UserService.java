@@ -1,4 +1,4 @@
-package com.mum.service;
+/*package com.mum.service;
 
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
@@ -33,4 +33,4 @@ public class UserService implements UserDetailsService {
 		return user;
 	}
 
-}
+}*/

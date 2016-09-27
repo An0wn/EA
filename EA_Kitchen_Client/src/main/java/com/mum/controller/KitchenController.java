@@ -53,7 +53,7 @@ public class KitchenController {
 		kit.setKitchenType(kitchenType);
 		kitchenService.Add(kit);
 		redirectAttrs.addFlashAttribute("kitchens", kitchenService.getAllKitchen());
-		return "redirect:/kitchenList";
+		return "redirect:/kitchen/list";
 	}
 
 	@RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
