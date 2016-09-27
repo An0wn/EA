@@ -21,21 +21,22 @@ public class HomeController {
 	public HomeController() {
 		// TODO Auto-generated constructor stub
 	}
+
 	@Resource
 	private IUserDAO userDao;
-	
-	/*@RequestMapping("/homeI")
-	public String greeting(@RequestParam(value = "name", required = false, defaultValue = "ABCD Team ff") String name,
-			Model model) {
-		model.addAttribute("name", name);
-		return "home";
-	}*/
+
+	/*
+	 * @RequestMapping("/homeI") public String greeting(@RequestParam(value =
+	 * "name", required = false, defaultValue = "ABCD Team ff") String name,
+	 * Model model) { model.addAttribute("name", name); return "home"; }
+	 */
 	@RequestMapping("/")
-	public String mainPage(){
+	public String mainPage() {
 		return "login";
 	}
+
 	@RequestMapping("/home")
-	public String home(){
+	public String home() {
 		return "home";
 	}
 
@@ -45,29 +46,28 @@ public class HomeController {
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public ModelAndView loginUser(User user,HttpSession session) {
+	public ModelAndView loginUser(User user, HttpSession session) {
 		ModelAndView mav = new ModelAndView();
-		User puser=userDao.loginUser(user);
-		if (puser.equals(null)) {
+		mav.setViewName("login");
+		User puser = userDao.loginUser(user);
+		if (puser==null) {
 			mav.addObject("error", "username or password mismatch");
 		} else {
 			session.setAttribute("currentUser", puser);
 			mav.addObject("currentUser", puser);
-			//mav.setViewName("customer");
-			
+			// mav.setViewName("customer");
+
 			EaKitchenClientApplication.logginInUserId = puser.getUserId();
-			if(puser.getUserRole()==UserRole.ROLE_COMMITTEE){
+			if (puser.getUserRole() == UserRole.ROLE_COMMITTEE) {
 				mav.setViewName("redirect:/home");
-			}
-			else if(puser.getUserRole()==UserRole.ROLE_CUSTOMER){
+			} else if (puser.getUserRole() == UserRole.ROLE_CUSTOMER) {
 				mav.setViewName("customer");
-			}
-			else if(puser.getUserRole()==UserRole.ROLE_FARMER){
+			} else if (puser.getUserRole() == UserRole.ROLE_FARMER) {
 				mav.setViewName("redirect:/scheduleFarmerProduceList");
 			}
 		}
 		return mav;
-		//return "redirect:/customer";
+		// return "redirect:/customer";
 	}
 
 }
