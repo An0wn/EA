@@ -10,6 +10,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -25,12 +26,16 @@ import com.mum.model.Customer;
 import com.mum.model.Kitchen;
 import com.mum.model.Schedule;
 import com.mum.model.User;
+import com.mum.validator.DateValidator;
 
 @Controller
 public class CustomerController {
 
 	@Resource
 	private ICustomer customer;
+
+	@Autowired
+	DateValidator dateValidator;
 
 	@RequestMapping("/customer")
 	public String CustomerMainPage() {
@@ -80,6 +85,7 @@ public class CustomerController {
 	@RequestMapping(value = "/saveschedulekitchen", method = RequestMethod.POST)
 	public String saveschedulekitchen(@Valid @ModelAttribute("schedule") Schedule schedule, BindingResult result,
 			HttpSession session, RedirectAttributes redirect) {
+		dateValidator.validate(schedule, result);
 		if (result.hasErrors()) {
 			return "ScheduleKitchen";
 		} else {

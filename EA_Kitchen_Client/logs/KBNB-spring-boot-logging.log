@@ -1163,3 +1163,41 @@ java.lang.IllegalArgumentException: Not enough variable values available to expa
 2016-09-27 17:17:44.455  INFO 484 --- [http-nio-8080-exec-2] c.m.controller.FarmerProduceController   : Method getFarmerProducePage has been called
 >>>>>>> branch 'master' of https://github.com/Klaudioz/EA.git
 2016-09-27 17:45:35.143  INFO 14096 --- [http-nio-8080-exec-4] com.mum.controller.ProduceController     : Method getProducePage has been called
+2016-09-27 18:18:53.864  INFO 14096 --- [RMI TCP Connection(2)-10.10.14.2] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2016-09-27 18:18:53.866  INFO 14096 --- [RMI TCP Connection(2)-10.10.14.2] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7f0eb4b4: startup date [Tue Sep 27 17:31:15 CDT 2016]; root of context hierarchy
+2016-09-27 18:18:53.880  INFO 14096 --- [RMI TCP Connection(2)-10.10.14.2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-09-27 18:19:03.887  INFO 15620 --- [main] c.mum.config.EaKitchenClientApplication  : Starting EaKitchenClientApplication on anil with PID 15620 (E:\EAProject\EA\EA_Kitchen_Client\target\classes started by yenil in E:\EAProject\EA\EA_Kitchen_Client)
+2016-09-27 18:19:03.904  INFO 15620 --- [main] c.mum.config.EaKitchenClientApplication  : No active profile set, falling back to default profiles: default
+2016-09-27 18:19:04.305  INFO 15620 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7f0eb4b4: startup date [Tue Sep 27 18:19:04 CDT 2016]; root of context hierarchy
+2016-09-27 18:19:13.160  INFO 15620 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-09-27 18:19:13.342  INFO 15620 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-09-27 18:19:13.358  INFO 15620 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.5
+2016-09-27 18:19:15.478  INFO 15620 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2016-09-27 18:19:15.499  INFO 15620 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-09-27 18:19:15.500  INFO 15620 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 11207 ms
+2016-09-27 18:19:16.884  INFO 15620 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-09-27 18:19:16.927  INFO 15620 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-09-27 18:19:16.937  INFO 15620 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-09-27 18:19:16.941  INFO 15620 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-09-27 18:19:16.958  INFO 15620 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-09-27 18:19:18.626  WARN 15620 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customerController': Unsatisfied dependency expressed through field 'dateValidator'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean found for dependency [com.mum.validator.DateValidator]: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2016-09-27 18:19:18.639  INFO 15620 --- [main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2016-09-27 18:19:18.707  WARN 15620 --- [localhost-startStop-1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+2016-09-27 18:19:18.773  INFO 15620 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2016-09-27 18:19:19.230 ERROR 15620 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field dateValidator in com.mum.controller.CustomerController required a bean of type 'com.mum.validator.DateValidator' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.mum.validator.DateValidator' in your configuration.
+
