@@ -30,5 +30,7 @@
 	</c:forEach>
 	</table>
 
+<a href="/scheduleProduceList">List of potential delivery</a>
+
 </body>
 </html>
