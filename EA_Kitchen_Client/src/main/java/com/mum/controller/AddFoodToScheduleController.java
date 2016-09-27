@@ -37,7 +37,10 @@ public class AddFoodToScheduleController {
 		List<ScheduleProduce> scheduleProduces=scheduleProduceDAO.getScheduleProduceForSchedule(scheduleId);
 		model.addAttribute("scheduleProduces", scheduleProduces);
 		
-		model.addAttribute("produces",produceDAO.getProduces());
+		List<Produce> produces = produceDAO.getProduces();
+		model.addAttribute("produces",produces);
+		
+		model.addAttribute("scheduleId", scheduleId);
 		
 		
 		return "AddFoodToSchedule";
@@ -67,6 +70,10 @@ public class AddFoodToScheduleController {
 		
 		//for(String produceId:produceArray){
 		for(int i=0;i<produceArray.length;i++){
+			
+			if(Integer.parseInt(produceArray[i]) < 1)
+				continue;
+			
 			Produce produce = null;
 			for(Produce p:produces){
 				if(p.getProduceId() == Integer.parseInt(produceArray[i])){
@@ -79,15 +86,15 @@ public class AddFoodToScheduleController {
 			ScheduleProduce sp=new ScheduleProduce();
 			sp.setDate(schedule.getStartDate());
 			sp.setProduce(produce);
-			sp.setQuantity(Integer.parseInt(produceArray[i]));
-			sp.setRemainingQuantity(Integer.parseInt(produceArray[i]));
+			sp.setQuantity(Integer.parseInt(quantityArray[i]));
+			sp.setRemainingQuantity(Integer.parseInt(quantityArray[i]));
 			sp.setSchedule(schedule);
 			
 			scheduleProduceDAO.saveScheduleProduce(sp);
 			
 		}
 		
-		return "redirect:/AddFoodToSchedule";
+		return "redirect:/addFoodToSchedule/"+scheduleId;
 	}
 
 }

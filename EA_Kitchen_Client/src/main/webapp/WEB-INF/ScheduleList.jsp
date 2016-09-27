@@ -21,7 +21,7 @@ Role :${currenUser.userRole}<br/>
 				<td>${s.startDate}</td>
 				<td>${s.endDate}</td>
 				<td>${k.city}</td>
-				<td><form action="/addFoodToSchedule/${s.scheduleId}" method="get">
+				<td><form action="/addFoodToSchedule/${s.scheduleId}" method="GET">
 						<input type="submit" name="Add Food"/>
 					</form></td>
 			</tr>

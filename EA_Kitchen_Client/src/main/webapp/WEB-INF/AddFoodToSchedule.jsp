@@ -29,9 +29,11 @@
 			</tr>
 			
 			<c:forEach var="scheduleProduce" items="${scheduleProduces}">
-				<td>${scheduleProduce.produce.name}</td>
+			<tr>
+				<td>${scheduleProduce.produce.produceName}</td>
 				<td>${scheduleProduce.quantity}</td>
 				<td>${scheduleProduce.remainingQuantity}</td>
+				</tr>
 			</c:forEach>
 			
 		</table>
@@ -39,14 +41,14 @@
 		
 		
 		
-		<from id="aFrom" class="form" method="post" action="addFoodToKitchen">
+		<form class="form" method="post" action="/addFoodToSchedule/${scheduleId}">
 		
 		<div id="divToAppend">
-			<div id="selectProduce">
+			<div id="holderDiv">
 					<select id="selectProduce" name="produces[]">
 		   				<c:forEach var="produce" items="${produces}">
 		       				<option value="${produce.produceId}" >${produce.produceName}</option>
-		       				<!-- selected="${produce.produceId == selectedProduceId ? 'selected' : ''" -->
+		       				
 		   				</c:forEach>
 					</select>
 					<input type="number" min="1" name="quantity[]">
@@ -56,9 +58,11 @@
 		
 			<button type="button" onclick="addFood()">Add More Food</button>
 			<br/>
+			<br/>
+			<br/>
 			<input type="submit" name="Submit Orders"/>
 		
-		</from>
+		</form>
 
 	</div>
 
