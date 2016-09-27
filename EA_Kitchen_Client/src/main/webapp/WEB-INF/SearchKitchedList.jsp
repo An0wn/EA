@@ -18,10 +18,9 @@
 			<td>${ k.address}</td>
 			<td><form action="/schedulekitchen"
 					method="post">
-					<input type="text" name="kitchenId" value="${k.kitchenId}" /> <input type="submit" name="Schedule" />
+					<input type="hidden"  name="kitchenId" value="${k.kitchenId}" /> <input type="submit" value="Schedule" />
 				</form></td>
 		</tr>
 	</c:forEach>
 </table>
-</body>
-</html>
+<jsp:include page="footer.jsp" flush="true" />

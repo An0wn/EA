@@ -11,7 +11,7 @@
 		<input type="hidden" name="${_csrf.parameterName}"
 			value="${_csrf.token}" />
 		<div>
-			<label for="userName">Usercc Name</label> <input type="text"
+			<label for="userName">User Name</label> <input type="text"
 				name="username" id="username" required autofocus>
 		</div>
 		<div>
