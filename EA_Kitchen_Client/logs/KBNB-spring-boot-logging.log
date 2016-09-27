@@ -57,6 +57,506 @@
 2016-09-27 12:07:03.142  INFO 5300 --- [http-nio-8080-exec-4] c.m.controller.FarmerProduceController   : Method getFarmerProducePage has been called
 2016-09-27 12:07:20.252  INFO 5300 --- [http-nio-8080-exec-5] com.mum.controller.ProduceController     : Method getProducePage has been called
 <<<<<<< HEAD
+2016-09-27 17:05:17.324  INFO 7156 --- [main] c.mum.config.EaKitchenClientApplication  : Starting EaKitchenClientApplication on DESKTOP-B1IAO1L with PID 7156 (F:\Study\EA\Project\EA\EA_Kitchen_Client\target\classes started by bandeshor in F:\Study\EA\Project\EA\EA_Kitchen_Client)
+2016-09-27 17:05:17.328  INFO 7156 --- [main] c.mum.config.EaKitchenClientApplication  : No active profile set, falling back to default profiles: default
+2016-09-27 17:05:17.425  INFO 7156 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@158d2680: startup date [Tue Sep 27 17:05:17 CDT 2016]; root of context hierarchy
+2016-09-27 17:05:19.061  INFO 7156 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-09-27 17:05:19.073  INFO 7156 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-09-27 17:05:19.074  INFO 7156 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.5
+2016-09-27 17:05:19.362  INFO 7156 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2016-09-27 17:05:19.367  INFO 7156 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-09-27 17:05:19.368  INFO 7156 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1947 ms
+2016-09-27 17:05:19.600  INFO 7156 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-09-27 17:05:19.604  INFO 7156 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-09-27 17:05:19.605  INFO 7156 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-09-27 17:05:19.605  INFO 7156 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-09-27 17:05:19.605  INFO 7156 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-09-27 17:05:20.326  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@158d2680: startup date [Tue Sep 27 17:05:17 CDT 2016]; root of context hierarchy
+2016-09-27 17:05:20.402  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/addFoodToSchedule/{scheduleId}],methods=[GET]}" onto public java.lang.String com.mum.controller.AddFoodToScheduleController.getAddedFoodSchedule(int,org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2016-09-27 17:05:20.403  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/addFoodToSchedule/{scheduleId}],methods=[POST]}" onto public java.lang.String com.mum.controller.AddFoodToScheduleController.postFoodSchedule(int,java.lang.String[],java.lang.String[],org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2016-09-27 17:05:20.404  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/checkAvailability]}" onto public void com.mum.controller.CustomerController.checkAvailability(int,java.util.Date)
+2016-09-27 17:05:20.405  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/saveschedulekitchen],methods=[POST]}" onto public java.lang.String com.mum.controller.CustomerController.saveschedulekitchen(com.mum.model.Schedule,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2016-09-27 17:05:20.406  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customer]}" onto public java.lang.String com.mum.controller.CustomerController.CustomerMainPage()
+2016-09-27 17:05:20.412  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/availableKitchen]}" onto public java.lang.String com.mum.controller.CustomerController.availableKitchen(com.mum.model.Address)
+2016-09-27 17:05:20.412  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/schedulekitchen],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.CustomerController.schedulekitchen(int,javax.servlet.http.HttpSession)
+2016-09-27 17:05:20.412  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleList],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.CustomerController.scheduleList(javax.servlet.http.HttpSession)
+2016-09-27 17:05:20.413  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/searchKitchen],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.CustomerController.searchKitchen(java.lang.String,javax.servlet.http.HttpSession)
+2016-09-27 17:05:20.414  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error/{message}],methods=[GET]}" onto public java.lang.String com.mum.controller.ErrorDisplayController.setTheErrorPage(java.lang.String,org.springframework.ui.Model)
+2016-09-27 17:05:20.414  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/farmerProduceList],methods=[GET]}" onto public java.lang.String com.mum.controller.FarmerProduceController.getFarmerProducePage(org.springframework.ui.Model)
+2016-09-27 17:05:20.414  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/farmerProduceList],methods=[POST]}" onto public java.lang.String com.mum.controller.FarmerProduceController.addFarmerProducePage(org.springframework.ui.Model)
+2016-09-27 17:05:20.417  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.mum.controller.HomeController.home()
+2016-09-27 17:05:20.418  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/homeI]}" onto public java.lang.String com.mum.controller.HomeController.greeting(java.lang.String,org.springframework.ui.Model)
+2016-09-27 17:05:20.418  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.HomeController.loginUser(com.mum.model.User,javax.servlet.http.HttpSession)
+2016-09-27 17:05:20.418  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.mum.controller.HomeController.viewLogin()
+2016-09-27 17:05:20.421  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/delete/{id}],methods=[GET]}" onto public java.lang.String com.mum.controller.KitchenController.delete(int,org.springframework.ui.Model)
+2016-09-27 17:05:20.422  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/add],methods=[POST]}" onto public java.lang.String com.mum.controller.KitchenController.addKitchenA(java.lang.String,java.lang.String,com.mum.model.KitchenType,java.lang.String,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2016-09-27 17:05:20.422  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/list]}" onto public java.lang.String com.mum.controller.KitchenController.getAllKitchen(org.springframework.ui.Model)
+2016-09-27 17:05:20.422  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/edit],methods=[POST]}" onto public java.lang.String com.mum.controller.KitchenController.edit(java.lang.String,int,java.lang.String,com.mum.model.KitchenType,java.lang.String,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2016-09-27 17:05:20.422  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/edit/{id}],methods=[GET]}" onto public java.lang.String com.mum.controller.KitchenController.edit(int,org.springframework.ui.Model)
+2016-09-27 17:05:20.423  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/add],methods=[GET]}" onto public java.lang.String com.mum.controller.KitchenController.addKitchen()
+2016-09-27 17:05:20.423  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/produceList],methods=[POST]}" onto public java.lang.String com.mum.controller.ProduceController.addProducePage(int,int)
+2016-09-27 17:05:20.423  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/produceList],methods=[GET]}" onto public java.lang.String com.mum.controller.ProduceController.getProducePage(org.springframework.ui.Model)
+2016-09-27 17:05:20.424  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleFarmerProduceList],methods=[GET]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.getScheduleFarmerProducePage(org.springframework.ui.Model)
+2016-09-27 17:05:20.424  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleProduceList],methods=[GET]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.getScheduleProducePage(org.springframework.ui.Model)
+2016-09-27 17:05:20.425  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleProduceList],methods=[POST]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.addScheduleProducePage(int,int)
+2016-09-27 17:05:20.425  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleProduceList]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.redirectRoot()
+2016-09-27 17:05:20.427  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-09-27 17:05:20.428  INFO 7156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-09-27 17:05:20.513  INFO 7156 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-27 17:05:20.513  INFO 7156 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-27 17:05:20.574  INFO 7156 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-27 17:05:20.614  INFO 7156 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2016-09-27 17:05:20.795  INFO 7156 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-09-27 17:05:20.878  INFO 7156 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-09-27 17:05:20.882  INFO 7156 --- [main] c.mum.config.EaKitchenClientApplication  : Started EaKitchenClientApplication in 3.981 seconds (JVM running for 4.443)
+2016-09-27 17:05:52.359  INFO 7156 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-09-27 17:05:52.360  INFO 7156 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-09-27 17:05:52.389  INFO 7156 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+2016-09-27 17:05:58.814  INFO 7156 --- [http-nio-8080-exec-3] c.m.controller.FarmerProduceController   : Method getFarmerProducePage has been called
+2016-09-27 17:07:16.020  INFO 7156 --- [RMI TCP Connection(5)-10.10.13.20] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2016-09-27 17:07:16.020  INFO 7156 --- [RMI TCP Connection(5)-10.10.13.20] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@158d2680: startup date [Tue Sep 27 17:05:17 CDT 2016]; root of context hierarchy
+2016-09-27 17:07:16.022  INFO 7156 --- [RMI TCP Connection(5)-10.10.13.20] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-09-27 17:07:20.918  INFO 4476 --- [main] c.mum.config.EaKitchenClientApplication  : Starting EaKitchenClientApplication on DESKTOP-B1IAO1L with PID 4476 (F:\Study\EA\Project\EA\EA_Kitchen_Client\target\classes started by bandeshor in F:\Study\EA\Project\EA\EA_Kitchen_Client)
+2016-09-27 17:07:20.922  INFO 4476 --- [main] c.mum.config.EaKitchenClientApplication  : No active profile set, falling back to default profiles: default
+2016-09-27 17:07:20.979  INFO 4476 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@158d2680: startup date [Tue Sep 27 17:07:20 CDT 2016]; root of context hierarchy
+2016-09-27 17:07:22.640  INFO 4476 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-09-27 17:07:22.654  INFO 4476 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-09-27 17:07:22.655  INFO 4476 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.5
+2016-09-27 17:07:22.937  INFO 4476 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2016-09-27 17:07:22.942  INFO 4476 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-09-27 17:07:22.943  INFO 4476 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1967 ms
+2016-09-27 17:07:23.173  INFO 4476 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-09-27 17:07:23.179  INFO 4476 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-09-27 17:07:23.180  INFO 4476 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-09-27 17:07:23.180  INFO 4476 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-09-27 17:07:23.180  INFO 4476 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-09-27 17:07:23.864  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@158d2680: startup date [Tue Sep 27 17:07:20 CDT 2016]; root of context hierarchy
+2016-09-27 17:07:23.926  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/addFoodToSchedule/{scheduleId}],methods=[GET]}" onto public java.lang.String com.mum.controller.AddFoodToScheduleController.getAddedFoodSchedule(int,org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2016-09-27 17:07:23.927  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/addFoodToSchedule/{scheduleId}],methods=[POST]}" onto public java.lang.String com.mum.controller.AddFoodToScheduleController.postFoodSchedule(int,java.lang.String[],java.lang.String[],org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2016-09-27 17:07:23.928  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/saveschedulekitchen],methods=[POST]}" onto public java.lang.String com.mum.controller.CustomerController.saveschedulekitchen(com.mum.model.Schedule,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2016-09-27 17:07:23.929  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/checkAvailability]}" onto public void com.mum.controller.CustomerController.checkAvailability(int,java.util.Date)
+2016-09-27 17:07:23.929  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleList],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.CustomerController.scheduleList(javax.servlet.http.HttpSession)
+2016-09-27 17:07:23.929  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customer]}" onto public java.lang.String com.mum.controller.CustomerController.CustomerMainPage()
+2016-09-27 17:07:23.929  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/schedulekitchen],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.CustomerController.schedulekitchen(int,javax.servlet.http.HttpSession)
+2016-09-27 17:07:23.929  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/searchKitchen],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.CustomerController.searchKitchen(java.lang.String,javax.servlet.http.HttpSession)
+2016-09-27 17:07:23.930  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/availableKitchen]}" onto public java.lang.String com.mum.controller.CustomerController.availableKitchen(com.mum.model.Address)
+2016-09-27 17:07:23.930  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error/{message}],methods=[GET]}" onto public java.lang.String com.mum.controller.ErrorDisplayController.setTheErrorPage(java.lang.String,org.springframework.ui.Model)
+2016-09-27 17:07:23.931  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/farmerProduceList],methods=[GET]}" onto public java.lang.String com.mum.controller.FarmerProduceController.getFarmerProducePage(org.springframework.ui.Model)
+2016-09-27 17:07:23.931  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/farmerProduceList],methods=[POST]}" onto public java.lang.String com.mum.controller.FarmerProduceController.addFarmerProducePage(org.springframework.ui.Model)
+2016-09-27 17:07:23.933  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.mum.controller.HomeController.home()
+2016-09-27 17:07:23.933  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.HomeController.loginUser(com.mum.model.User,javax.servlet.http.HttpSession)
+2016-09-27 17:07:23.934  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/homeI]}" onto public java.lang.String com.mum.controller.HomeController.greeting(java.lang.String,org.springframework.ui.Model)
+2016-09-27 17:07:23.934  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.mum.controller.HomeController.viewLogin()
+2016-09-27 17:07:23.937  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/delete/{id}],methods=[GET]}" onto public java.lang.String com.mum.controller.KitchenController.delete(int,org.springframework.ui.Model)
+2016-09-27 17:07:23.938  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/edit/{id}],methods=[GET]}" onto public java.lang.String com.mum.controller.KitchenController.edit(int,org.springframework.ui.Model)
+2016-09-27 17:07:23.938  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/edit],methods=[POST]}" onto public java.lang.String com.mum.controller.KitchenController.edit(java.lang.String,int,java.lang.String,com.mum.model.KitchenType,java.lang.String,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2016-09-27 17:07:23.938  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/add],methods=[POST]}" onto public java.lang.String com.mum.controller.KitchenController.addKitchenA(java.lang.String,java.lang.String,com.mum.model.KitchenType,java.lang.String,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2016-09-27 17:07:23.939  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/add],methods=[GET]}" onto public java.lang.String com.mum.controller.KitchenController.addKitchen()
+2016-09-27 17:07:23.940  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/list]}" onto public java.lang.String com.mum.controller.KitchenController.getAllKitchen(org.springframework.ui.Model)
+2016-09-27 17:07:23.942  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/produceList],methods=[POST]}" onto public java.lang.String com.mum.controller.ProduceController.addProducePage(int,int)
+2016-09-27 17:07:23.943  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/produceList],methods=[GET]}" onto public java.lang.String com.mum.controller.ProduceController.getProducePage(org.springframework.ui.Model)
+2016-09-27 17:07:23.946  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleProduceList],methods=[GET]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.getScheduleProducePage(org.springframework.ui.Model)
+2016-09-27 17:07:23.949  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleFarmerProduceList],methods=[GET]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.getScheduleFarmerProducePage(org.springframework.ui.Model)
+2016-09-27 17:07:23.950  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleProduceList],methods=[POST]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.addScheduleProducePage(int,int)
+2016-09-27 17:07:23.950  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleProduceList]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.redirectRoot()
+2016-09-27 17:07:23.955  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-09-27 17:07:23.956  INFO 4476 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-09-27 17:07:24.050  INFO 4476 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-27 17:07:24.050  INFO 4476 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-27 17:07:24.109  INFO 4476 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-27 17:07:24.152  INFO 4476 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2016-09-27 17:07:24.334  INFO 4476 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-09-27 17:07:24.415  INFO 4476 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-09-27 17:07:24.425  INFO 4476 --- [main] c.mum.config.EaKitchenClientApplication  : Started EaKitchenClientApplication in 3.925 seconds (JVM running for 4.349)
+2016-09-27 17:07:30.472  INFO 4476 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-09-27 17:07:30.472  INFO 4476 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-09-27 17:07:30.498  INFO 4476 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+2016-09-27 17:20:28.886  INFO 4476 --- [RMI TCP Connection(17)-10.10.13.20] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2016-09-27 17:20:28.887  INFO 4476 --- [RMI TCP Connection(17)-10.10.13.20] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@158d2680: startup date [Tue Sep 27 17:07:20 CDT 2016]; root of context hierarchy
+2016-09-27 17:20:28.889  INFO 4476 --- [RMI TCP Connection(17)-10.10.13.20] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-09-27 17:20:36.898  INFO 8076 --- [main] c.mum.config.EaKitchenClientApplication  : Starting EaKitchenClientApplication on DESKTOP-B1IAO1L with PID 8076 (F:\Study\EA\Project\EA\EA_Kitchen_Client\target\classes started by bandeshor in F:\Study\EA\Project\EA\EA_Kitchen_Client)
+2016-09-27 17:20:36.902  INFO 8076 --- [main] c.mum.config.EaKitchenClientApplication  : No active profile set, falling back to default profiles: default
+2016-09-27 17:20:36.987  INFO 8076 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@158d2680: startup date [Tue Sep 27 17:20:36 CDT 2016]; root of context hierarchy
+2016-09-27 17:20:38.710  INFO 8076 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-09-27 17:20:38.722  INFO 8076 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-09-27 17:20:38.723  INFO 8076 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.5
+2016-09-27 17:20:39.003  INFO 8076 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2016-09-27 17:20:39.007  INFO 8076 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-09-27 17:20:39.007  INFO 8076 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2023 ms
+2016-09-27 17:20:39.229  INFO 8076 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-09-27 17:20:39.237  INFO 8076 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-09-27 17:20:39.237  INFO 8076 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-09-27 17:20:39.238  INFO 8076 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-09-27 17:20:39.238  INFO 8076 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-09-27 17:20:39.918  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@158d2680: startup date [Tue Sep 27 17:20:36 CDT 2016]; root of context hierarchy
+2016-09-27 17:20:39.993  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/addFoodToSchedule/{scheduleId}],methods=[GET]}" onto public java.lang.String com.mum.controller.AddFoodToScheduleController.getAddedFoodSchedule(int,org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2016-09-27 17:20:39.994  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/addFoodToSchedule/{scheduleId}],methods=[POST]}" onto public java.lang.String com.mum.controller.AddFoodToScheduleController.postFoodSchedule(int,java.lang.String[],java.lang.String[],org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2016-09-27 17:20:39.995  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/checkAvailability]}" onto public void com.mum.controller.CustomerController.checkAvailability(int,java.util.Date)
+2016-09-27 17:20:39.996  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customer]}" onto public java.lang.String com.mum.controller.CustomerController.CustomerMainPage()
+2016-09-27 17:20:39.996  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleList],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.CustomerController.scheduleList(javax.servlet.http.HttpSession)
+2016-09-27 17:20:39.996  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/searchKitchen],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.CustomerController.searchKitchen(java.lang.String,javax.servlet.http.HttpSession)
+2016-09-27 17:20:39.997  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/saveschedulekitchen],methods=[POST]}" onto public java.lang.String com.mum.controller.CustomerController.saveschedulekitchen(com.mum.model.Schedule,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2016-09-27 17:20:39.997  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/availableKitchen]}" onto public java.lang.String com.mum.controller.CustomerController.availableKitchen(com.mum.model.Address)
+2016-09-27 17:20:39.997  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/schedulekitchen],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.CustomerController.schedulekitchen(int,javax.servlet.http.HttpSession)
+2016-09-27 17:20:39.997  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error/{message}],methods=[GET]}" onto public java.lang.String com.mum.controller.ErrorDisplayController.setTheErrorPage(java.lang.String,org.springframework.ui.Model)
+2016-09-27 17:20:39.998  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/farmerProduceList],methods=[GET]}" onto public java.lang.String com.mum.controller.FarmerProduceController.getFarmerProducePage(org.springframework.ui.Model)
+2016-09-27 17:20:39.998  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/farmerProduceList],methods=[POST]}" onto public java.lang.String com.mum.controller.FarmerProduceController.addFarmerProducePage(org.springframework.ui.Model)
+2016-09-27 17:20:40.001  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.mum.controller.HomeController.home()
+2016-09-27 17:20:40.001  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.mum.controller.HomeController.viewLogin()
+2016-09-27 17:20:40.001  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/homeI]}" onto public java.lang.String com.mum.controller.HomeController.greeting(java.lang.String,org.springframework.ui.Model)
+2016-09-27 17:20:40.002  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.HomeController.loginUser(com.mum.model.User,javax.servlet.http.HttpSession)
+2016-09-27 17:20:40.005  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/delete/{id}],methods=[GET]}" onto public java.lang.String com.mum.controller.KitchenController.delete(int,org.springframework.ui.Model)
+2016-09-27 17:20:40.005  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/add],methods=[POST]}" onto public java.lang.String com.mum.controller.KitchenController.addKitchenA(java.lang.String,java.lang.String,com.mum.model.KitchenType,java.lang.String,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2016-09-27 17:20:40.005  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/add],methods=[GET]}" onto public java.lang.String com.mum.controller.KitchenController.addKitchen()
+2016-09-27 17:20:40.006  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/list]}" onto public java.lang.String com.mum.controller.KitchenController.getAllKitchen(org.springframework.ui.Model)
+2016-09-27 17:20:40.006  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/edit],methods=[POST]}" onto public java.lang.String com.mum.controller.KitchenController.edit(java.lang.String,int,java.lang.String,com.mum.model.KitchenType,java.lang.String,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2016-09-27 17:20:40.006  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/edit/{id}],methods=[GET]}" onto public java.lang.String com.mum.controller.KitchenController.edit(int,org.springframework.ui.Model)
+2016-09-27 17:20:40.007  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/produceList],methods=[POST]}" onto public java.lang.String com.mum.controller.ProduceController.addProducePage(int,int)
+2016-09-27 17:20:40.007  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/produceList],methods=[GET]}" onto public java.lang.String com.mum.controller.ProduceController.getProducePage(org.springframework.ui.Model)
+2016-09-27 17:20:40.008  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleFarmerProduceList],methods=[GET]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.getScheduleFarmerProducePage(org.springframework.ui.Model)
+2016-09-27 17:20:40.008  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleProduceList],methods=[POST]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.addScheduleProducePage(int,int)
+2016-09-27 17:20:40.009  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleProduceList],methods=[GET]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.getScheduleProducePage(org.springframework.ui.Model)
+2016-09-27 17:20:40.009  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleProduceList]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.redirectRoot()
+2016-09-27 17:20:40.012  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-09-27 17:20:40.012  INFO 8076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-09-27 17:20:40.363  INFO 8076 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-27 17:20:40.364  INFO 8076 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-27 17:20:40.718  INFO 8076 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-27 17:20:40.847  INFO 8076 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2016-09-27 17:20:41.021  INFO 8076 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-09-27 17:20:41.090  INFO 8076 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-09-27 17:20:41.094  INFO 8076 --- [main] c.mum.config.EaKitchenClientApplication  : Started EaKitchenClientApplication in 4.602 seconds (JVM running for 5.051)
+2016-09-27 17:20:57.260  INFO 8076 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-09-27 17:20:57.261  INFO 8076 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-09-27 17:20:57.285  INFO 8076 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+2016-09-27 17:21:01.577 ERROR 8076 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+
+java.lang.NullPointerException: null
+	at com.mum.controller.HomeController.loginUser(HomeController.java:47) ~[classes/:na]
+	at com.mum.controller.HomeController$$FastClassBySpringCGLIB$$14d979f7.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204) ~[spring-core-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720) ~[spring-aop-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157) ~[spring-aop-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52) ~[spring-aop-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92) ~[spring-aop-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655) ~[spring-aop-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at com.mum.controller.HomeController$$EnhancerBySpringCGLIB$$b6754427.loginUser(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:114) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_77]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_77]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_77]
+
+2016-09-27 17:26:31.246  INFO 8076 --- [RMI TCP Connection(11)-10.10.13.20] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2016-09-27 17:26:31.247  INFO 8076 --- [RMI TCP Connection(11)-10.10.13.20] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@158d2680: startup date [Tue Sep 27 17:20:36 CDT 2016]; root of context hierarchy
+2016-09-27 17:26:31.249  INFO 8076 --- [RMI TCP Connection(11)-10.10.13.20] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-09-27 17:26:37.982  INFO 2068 --- [main] c.mum.config.EaKitchenClientApplication  : Starting EaKitchenClientApplication on DESKTOP-B1IAO1L with PID 2068 (F:\Study\EA\Project\EA\EA_Kitchen_Client\target\classes started by bandeshor in F:\Study\EA\Project\EA\EA_Kitchen_Client)
+2016-09-27 17:26:37.985  INFO 2068 --- [main] c.mum.config.EaKitchenClientApplication  : No active profile set, falling back to default profiles: default
+2016-09-27 17:26:38.049  INFO 2068 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@158d2680: startup date [Tue Sep 27 17:26:38 CDT 2016]; root of context hierarchy
+2016-09-27 17:26:39.734  INFO 2068 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-09-27 17:26:39.745  INFO 2068 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-09-27 17:26:39.746  INFO 2068 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.5
+2016-09-27 17:26:40.068  INFO 2068 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2016-09-27 17:26:40.073  INFO 2068 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-09-27 17:26:40.073  INFO 2068 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2029 ms
+2016-09-27 17:26:40.331  INFO 2068 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-09-27 17:26:40.335  INFO 2068 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-09-27 17:26:40.335  INFO 2068 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-09-27 17:26:40.336  INFO 2068 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-09-27 17:26:40.338  INFO 2068 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-09-27 17:26:41.111  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@158d2680: startup date [Tue Sep 27 17:26:38 CDT 2016]; root of context hierarchy
+2016-09-27 17:26:41.206  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/addFoodToSchedule/{scheduleId}],methods=[GET]}" onto public java.lang.String com.mum.controller.AddFoodToScheduleController.getAddedFoodSchedule(int,org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2016-09-27 17:26:41.207  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/addFoodToSchedule/{scheduleId}],methods=[POST]}" onto public java.lang.String com.mum.controller.AddFoodToScheduleController.postFoodSchedule(int,java.lang.String[],java.lang.String[],org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2016-09-27 17:26:41.208  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/checkAvailability]}" onto public void com.mum.controller.CustomerController.checkAvailability(int,java.util.Date)
+2016-09-27 17:26:41.209  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/saveschedulekitchen],methods=[POST]}" onto public java.lang.String com.mum.controller.CustomerController.saveschedulekitchen(com.mum.model.Schedule,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2016-09-27 17:26:41.209  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleList],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.CustomerController.scheduleList(javax.servlet.http.HttpSession)
+2016-09-27 17:26:41.209  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customer]}" onto public java.lang.String com.mum.controller.CustomerController.CustomerMainPage()
+2016-09-27 17:26:41.209  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/availableKitchen]}" onto public java.lang.String com.mum.controller.CustomerController.availableKitchen(com.mum.model.Address)
+2016-09-27 17:26:41.209  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/schedulekitchen],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.CustomerController.schedulekitchen(int,javax.servlet.http.HttpSession)
+2016-09-27 17:26:41.210  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/searchKitchen],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.CustomerController.searchKitchen(java.lang.String,javax.servlet.http.HttpSession)
+2016-09-27 17:26:41.210  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error/{message}],methods=[GET]}" onto public java.lang.String com.mum.controller.ErrorDisplayController.setTheErrorPage(java.lang.String,org.springframework.ui.Model)
+2016-09-27 17:26:41.211  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/farmerProduceList],methods=[GET]}" onto public java.lang.String com.mum.controller.FarmerProduceController.getFarmerProducePage(org.springframework.ui.Model)
+2016-09-27 17:26:41.211  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/farmerProduceList],methods=[POST]}" onto public java.lang.String com.mum.controller.FarmerProduceController.addFarmerProducePage(org.springframework.ui.Model)
+2016-09-27 17:26:41.213  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home]}" onto public java.lang.String com.mum.controller.HomeController.home()
+2016-09-27 17:26:41.214  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.HomeController.loginUser(com.mum.model.User,javax.servlet.http.HttpSession)
+2016-09-27 17:26:41.214  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.mum.controller.HomeController.mainPage()
+2016-09-27 17:26:41.214  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.mum.controller.HomeController.viewLogin()
+2016-09-27 17:26:41.228  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/delete/{id}],methods=[GET]}" onto public java.lang.String com.mum.controller.KitchenController.delete(int,org.springframework.ui.Model)
+2016-09-27 17:26:41.229  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/list]}" onto public java.lang.String com.mum.controller.KitchenController.getAllKitchen(org.springframework.ui.Model)
+2016-09-27 17:26:41.230  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/add],methods=[POST]}" onto public java.lang.String com.mum.controller.KitchenController.addKitchenA(java.lang.String,java.lang.String,com.mum.model.KitchenType,java.lang.String,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2016-09-27 17:26:41.231  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/edit],methods=[POST]}" onto public java.lang.String com.mum.controller.KitchenController.edit(java.lang.String,int,java.lang.String,com.mum.model.KitchenType,java.lang.String,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2016-09-27 17:26:41.231  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/edit/{id}],methods=[GET]}" onto public java.lang.String com.mum.controller.KitchenController.edit(int,org.springframework.ui.Model)
+2016-09-27 17:26:41.232  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/add],methods=[GET]}" onto public java.lang.String com.mum.controller.KitchenController.addKitchen()
+2016-09-27 17:26:41.234  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/produceList],methods=[POST]}" onto public java.lang.String com.mum.controller.ProduceController.addProducePage(int,int)
+2016-09-27 17:26:41.237  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/produceList],methods=[GET]}" onto public java.lang.String com.mum.controller.ProduceController.getProducePage(org.springframework.ui.Model)
+2016-09-27 17:26:41.238  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleProduceList],methods=[POST]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.addScheduleProducePage(int,int)
+2016-09-27 17:26:41.239  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleFarmerProduceList],methods=[GET]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.getScheduleFarmerProducePage(org.springframework.ui.Model)
+2016-09-27 17:26:41.239  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleProduceList],methods=[GET]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.getScheduleProducePage(org.springframework.ui.Model)
+2016-09-27 17:26:41.239  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleProduceList]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.redirectRoot()
+2016-09-27 17:26:41.242  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-09-27 17:26:41.244  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-09-27 17:26:41.407  INFO 2068 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-27 17:26:41.408  INFO 2068 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-27 17:26:41.494  INFO 2068 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-27 17:26:41.551  INFO 2068 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2016-09-27 17:26:41.788  INFO 2068 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-09-27 17:26:41.914  INFO 2068 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-09-27 17:26:41.931  INFO 2068 --- [main] c.mum.config.EaKitchenClientApplication  : Started EaKitchenClientApplication in 4.342 seconds (JVM running for 4.794)
+2016-09-27 17:30:12.731  INFO 2068 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-09-27 17:30:12.732  INFO 2068 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-09-27 17:30:12.867  INFO 2068 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 135 ms
+2016-09-27 17:30:16.743 ERROR 2068 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+
+java.lang.NullPointerException: null
+	at com.mum.controller.HomeController.loginUser(HomeController.java:51) ~[classes/:na]
+	at com.mum.controller.HomeController$$FastClassBySpringCGLIB$$14d979f7.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204) ~[spring-core-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720) ~[spring-aop-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157) ~[spring-aop-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52) ~[spring-aop-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92) ~[spring-aop-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655) ~[spring-aop-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at com.mum.controller.HomeController$$EnhancerBySpringCGLIB$$405ca4cf.loginUser(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:114) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_77]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_77]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_77]
+
+2016-09-27 17:33:01.238  INFO 2068 --- [RMI TCP Connection(8)-10.10.13.20] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2016-09-27 17:33:01.239  INFO 2068 --- [RMI TCP Connection(8)-10.10.13.20] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@158d2680: startup date [Tue Sep 27 17:26:38 CDT 2016]; root of context hierarchy
+2016-09-27 17:33:01.243  INFO 2068 --- [RMI TCP Connection(8)-10.10.13.20] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-09-27 17:33:12.362  INFO 8276 --- [main] c.mum.config.EaKitchenClientApplication  : Starting EaKitchenClientApplication on DESKTOP-B1IAO1L with PID 8276 (F:\Study\EA\Project\EA\EA_Kitchen_Client\target\classes started by bandeshor in F:\Study\EA\Project\EA\EA_Kitchen_Client)
+2016-09-27 17:33:12.367  INFO 8276 --- [main] c.mum.config.EaKitchenClientApplication  : No active profile set, falling back to default profiles: default
+2016-09-27 17:33:12.461  INFO 8276 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7776ab: startup date [Tue Sep 27 17:33:12 CDT 2016]; root of context hierarchy
+2016-09-27 17:33:14.334  INFO 8276 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-09-27 17:33:14.349  INFO 8276 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-09-27 17:33:14.350  INFO 8276 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.5
+2016-09-27 17:33:14.682  INFO 8276 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2016-09-27 17:33:14.688  INFO 8276 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-09-27 17:33:14.688  INFO 8276 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2231 ms
+2016-09-27 17:33:14.939  INFO 8276 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-09-27 17:33:14.943  INFO 8276 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-09-27 17:33:14.943  INFO 8276 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-09-27 17:33:14.943  INFO 8276 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-09-27 17:33:14.943  INFO 8276 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-09-27 17:33:44.096  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7776ab: startup date [Tue Sep 27 17:33:12 CDT 2016]; root of context hierarchy
+2016-09-27 17:33:44.174  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/addFoodToSchedule/{scheduleId}],methods=[POST]}" onto public java.lang.String com.mum.controller.AddFoodToScheduleController.postFoodSchedule(int,java.lang.String[],java.lang.String[],org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2016-09-27 17:33:44.175  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/addFoodToSchedule/{scheduleId}],methods=[GET]}" onto public java.lang.String com.mum.controller.AddFoodToScheduleController.getAddedFoodSchedule(int,org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2016-09-27 17:33:44.176  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleList],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.CustomerController.scheduleList(javax.servlet.http.HttpSession)
+2016-09-27 17:33:44.177  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/searchKitchen],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.CustomerController.searchKitchen(java.lang.String,javax.servlet.http.HttpSession)
+2016-09-27 17:33:44.177  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/availableKitchen]}" onto public java.lang.String com.mum.controller.CustomerController.availableKitchen(com.mum.model.Address)
+2016-09-27 17:33:44.177  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customer]}" onto public java.lang.String com.mum.controller.CustomerController.CustomerMainPage()
+2016-09-27 17:33:44.177  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/schedulekitchen],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.CustomerController.schedulekitchen(int,javax.servlet.http.HttpSession)
+2016-09-27 17:33:44.178  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/saveschedulekitchen],methods=[POST]}" onto public java.lang.String com.mum.controller.CustomerController.saveschedulekitchen(com.mum.model.Schedule,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2016-09-27 17:33:44.178  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/checkAvailability]}" onto public void com.mum.controller.CustomerController.checkAvailability(int,java.util.Date)
+2016-09-27 17:33:44.178  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error/{message}],methods=[GET]}" onto public java.lang.String com.mum.controller.ErrorDisplayController.setTheErrorPage(java.lang.String,org.springframework.ui.Model)
+2016-09-27 17:33:44.179  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/farmerProduceList],methods=[GET]}" onto public java.lang.String com.mum.controller.FarmerProduceController.getFarmerProducePage(org.springframework.ui.Model)
+2016-09-27 17:33:44.179  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/farmerProduceList],methods=[POST]}" onto public java.lang.String com.mum.controller.FarmerProduceController.addFarmerProducePage(org.springframework.ui.Model)
+2016-09-27 17:33:44.182  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home]}" onto public java.lang.String com.mum.controller.HomeController.home()
+2016-09-27 17:33:44.182  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.mum.controller.HomeController.mainPage()
+2016-09-27 17:33:44.182  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.mum.controller.HomeController.viewLogin()
+2016-09-27 17:33:44.182  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.HomeController.loginUser(com.mum.model.User,javax.servlet.http.HttpSession)
+2016-09-27 17:33:44.186  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/delete/{id}],methods=[GET]}" onto public java.lang.String com.mum.controller.KitchenController.delete(int,org.springframework.ui.Model)
+2016-09-27 17:33:44.186  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/edit/{id}],methods=[GET]}" onto public java.lang.String com.mum.controller.KitchenController.edit(int,org.springframework.ui.Model)
+2016-09-27 17:33:44.186  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/edit],methods=[POST]}" onto public java.lang.String com.mum.controller.KitchenController.edit(java.lang.String,int,java.lang.String,com.mum.model.KitchenType,java.lang.String,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2016-09-27 17:33:44.187  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/add],methods=[GET]}" onto public java.lang.String com.mum.controller.KitchenController.addKitchen()
+2016-09-27 17:33:44.187  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/list]}" onto public java.lang.String com.mum.controller.KitchenController.getAllKitchen(org.springframework.ui.Model)
+2016-09-27 17:33:44.187  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/add],methods=[POST]}" onto public java.lang.String com.mum.controller.KitchenController.addKitchenA(java.lang.String,java.lang.String,com.mum.model.KitchenType,java.lang.String,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2016-09-27 17:33:44.188  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/produceList],methods=[GET]}" onto public java.lang.String com.mum.controller.ProduceController.getProducePage(org.springframework.ui.Model)
+2016-09-27 17:33:44.188  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/produceList],methods=[POST]}" onto public java.lang.String com.mum.controller.ProduceController.addProducePage(int,int)
+2016-09-27 17:33:44.189  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleProduceList]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.redirectRoot()
+2016-09-27 17:33:44.189  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleProduceList],methods=[GET]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.getScheduleProducePage(org.springframework.ui.Model)
+2016-09-27 17:33:44.189  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleProduceList],methods=[POST]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.addScheduleProducePage(int,int)
+2016-09-27 17:33:44.190  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleFarmerProduceList],methods=[GET]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.getScheduleFarmerProducePage(org.springframework.ui.Model)
+2016-09-27 17:33:44.193  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-09-27 17:33:44.193  INFO 8276 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-09-27 17:33:44.330  INFO 8276 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-27 17:33:44.330  INFO 8276 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-27 17:33:44.406  INFO 8276 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-27 17:33:44.465  INFO 8276 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2016-09-27 17:33:44.818  INFO 8276 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-09-27 17:33:44.921  INFO 8276 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-09-27 17:33:44.927  INFO 8276 --- [main] c.mum.config.EaKitchenClientApplication  : Started EaKitchenClientApplication in 33.059 seconds (JVM running for 34.352)
+2016-09-27 17:33:53.605  INFO 8276 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-09-27 17:33:53.606  INFO 8276 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-09-27 17:33:53.644  INFO 8276 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 38 ms
+2016-09-27 17:34:12.912 ERROR 8276 --- [http-nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+
+java.lang.NullPointerException: null
+	at com.mum.controller.HomeController.loginUser(HomeController.java:51) ~[classes/:na]
+	at com.mum.controller.HomeController$$FastClassBySpringCGLIB$$14d979f7.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204) ~[spring-core-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720) ~[spring-aop-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157) ~[spring-aop-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52) ~[spring-aop-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92) ~[spring-aop-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655) ~[spring-aop-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at com.mum.controller.HomeController$$EnhancerBySpringCGLIB$$38a92da0.loginUser(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:114) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_77]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_77]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_77]
+
+2016-09-27 17:36:22.320  INFO 8276 --- [RMI TCP Connection(6)-10.10.13.20] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2016-09-27 17:36:22.320  INFO 8276 --- [RMI TCP Connection(6)-10.10.13.20] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7776ab: startup date [Tue Sep 27 17:33:12 CDT 2016]; root of context hierarchy
+2016-09-27 17:36:22.322  INFO 8276 --- [RMI TCP Connection(6)-10.10.13.20] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+=======
+<<<<<<< HEAD
 2016-09-27 17:31:14.737  INFO 14096 --- [main] c.mum.config.EaKitchenClientApplication  : Starting EaKitchenClientApplication on anil with PID 14096 (E:\EAProject\EA\EA_Kitchen_Client\target\classes started by yenil in E:\EAProject\EA\EA_Kitchen_Client)
 2016-09-27 17:31:14.749  INFO 14096 --- [main] c.mum.config.EaKitchenClientApplication  : No active profile set, falling back to default profiles: default
 2016-09-27 17:31:15.042  INFO 14096 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7f0eb4b4: startup date [Tue Sep 27 17:31:15 CDT 2016]; root of context hierarchy
@@ -1162,7 +1662,619 @@ java.lang.IllegalArgumentException: Not enough variable values available to expa
 2016-09-27 17:17:43.889  INFO 484 --- [http-nio-8080-exec-1] com.mum.controller.ProduceController     : Method getProducePage has been called
 2016-09-27 17:17:44.455  INFO 484 --- [http-nio-8080-exec-2] c.m.controller.FarmerProduceController   : Method getFarmerProducePage has been called
 >>>>>>> branch 'master' of https://github.com/Klaudioz/EA.git
+<<<<<<< HEAD
+>>>>>>> branch 'master' of https://github.com/Klaudioz/EA.git
+2016-09-27 17:41:43.195  INFO 8164 --- [main] c.mum.config.EaKitchenClientApplication  : Starting EaKitchenClientApplication on DESKTOP-B1IAO1L with PID 8164 (F:\Study\EA\Project\EA\EA_Kitchen_Client\target\classes started by bandeshor in F:\Study\EA\Project\EA\EA_Kitchen_Client)
+2016-09-27 17:41:43.198  INFO 8164 --- [main] c.mum.config.EaKitchenClientApplication  : No active profile set, falling back to default profiles: default
+2016-09-27 17:41:43.267  INFO 8164 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@158d2680: startup date [Tue Sep 27 17:41:43 CDT 2016]; root of context hierarchy
+2016-09-27 17:41:45.026  INFO 8164 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-09-27 17:41:45.042  INFO 8164 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-09-27 17:41:45.044  INFO 8164 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.5
+2016-09-27 17:41:45.381  INFO 8164 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2016-09-27 17:41:45.386  INFO 8164 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-09-27 17:41:45.387  INFO 8164 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2123 ms
+2016-09-27 17:41:45.656  INFO 8164 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-09-27 17:41:45.660  INFO 8164 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-09-27 17:41:45.661  INFO 8164 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-09-27 17:41:45.661  INFO 8164 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-09-27 17:41:45.662  INFO 8164 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-09-27 17:41:46.412  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@158d2680: startup date [Tue Sep 27 17:41:43 CDT 2016]; root of context hierarchy
+2016-09-27 17:41:46.514  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/addFoodToSchedule/{scheduleId}],methods=[GET]}" onto public java.lang.String com.mum.controller.AddFoodToScheduleController.getAddedFoodSchedule(int,org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2016-09-27 17:41:46.516  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/addFoodToSchedule/{scheduleId}],methods=[POST]}" onto public java.lang.String com.mum.controller.AddFoodToScheduleController.postFoodSchedule(int,java.lang.String[],java.lang.String[],org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2016-09-27 17:41:46.520  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/saveschedulekitchen],methods=[POST]}" onto public java.lang.String com.mum.controller.CustomerController.saveschedulekitchen(com.mum.model.Schedule,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2016-09-27 17:41:46.520  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/checkAvailability]}" onto public void com.mum.controller.CustomerController.checkAvailability(int,java.util.Date)
+2016-09-27 17:41:46.520  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/schedulekitchen],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.CustomerController.schedulekitchen(int,javax.servlet.http.HttpSession)
+2016-09-27 17:41:46.521  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleList],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.CustomerController.scheduleList(javax.servlet.http.HttpSession)
+2016-09-27 17:41:46.527  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customer]}" onto public java.lang.String com.mum.controller.CustomerController.CustomerMainPage()
+2016-09-27 17:41:46.528  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/searchKitchen],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.CustomerController.searchKitchen(java.lang.String,javax.servlet.http.HttpSession)
+2016-09-27 17:41:46.529  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/availableKitchen]}" onto public java.lang.String com.mum.controller.CustomerController.availableKitchen(com.mum.model.Address)
+2016-09-27 17:41:46.529  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error/{message}],methods=[GET]}" onto public java.lang.String com.mum.controller.ErrorDisplayController.setTheErrorPage(java.lang.String,org.springframework.ui.Model)
+2016-09-27 17:41:46.533  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/farmerProduceList],methods=[GET]}" onto public java.lang.String com.mum.controller.FarmerProduceController.getFarmerProducePage(org.springframework.ui.Model)
+2016-09-27 17:41:46.534  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/farmerProduceList],methods=[POST]}" onto public java.lang.String com.mum.controller.FarmerProduceController.addFarmerProducePage(org.springframework.ui.Model)
+2016-09-27 17:41:46.540  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home]}" onto public java.lang.String com.mum.controller.HomeController.home()
+2016-09-27 17:41:46.541  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.mum.controller.HomeController.viewLogin()
+2016-09-27 17:41:46.541  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.mum.controller.HomeController.mainPage()
+2016-09-27 17:41:46.541  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.HomeController.loginUser(com.mum.model.User,javax.servlet.http.HttpSession)
+2016-09-27 17:41:46.545  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/delete/{id}],methods=[GET]}" onto public java.lang.String com.mum.controller.KitchenController.delete(int,org.springframework.ui.Model)
+2016-09-27 17:41:46.545  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/add],methods=[GET]}" onto public java.lang.String com.mum.controller.KitchenController.addKitchen()
+2016-09-27 17:41:46.546  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/add],methods=[POST]}" onto public java.lang.String com.mum.controller.KitchenController.addKitchenA(java.lang.String,java.lang.String,com.mum.model.KitchenType,java.lang.String,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2016-09-27 17:41:46.547  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/list]}" onto public java.lang.String com.mum.controller.KitchenController.getAllKitchen(org.springframework.ui.Model)
+2016-09-27 17:41:46.548  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/edit],methods=[POST]}" onto public java.lang.String com.mum.controller.KitchenController.edit(java.lang.String,int,java.lang.String,com.mum.model.KitchenType,java.lang.String,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2016-09-27 17:41:46.548  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/edit/{id}],methods=[GET]}" onto public java.lang.String com.mum.controller.KitchenController.edit(int,org.springframework.ui.Model)
+2016-09-27 17:41:46.549  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/produceList],methods=[GET]}" onto public java.lang.String com.mum.controller.ProduceController.getProducePage(org.springframework.ui.Model)
+2016-09-27 17:41:46.549  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/produceList],methods=[POST]}" onto public java.lang.String com.mum.controller.ProduceController.addProducePage(int,int)
+2016-09-27 17:41:46.550  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleProduceList],methods=[POST]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.addScheduleProducePage(int,int)
+2016-09-27 17:41:46.550  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleProduceList],methods=[GET]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.getScheduleProducePage(org.springframework.ui.Model)
+2016-09-27 17:41:46.551  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleFarmerProduceList],methods=[GET]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.getScheduleFarmerProducePage(org.springframework.ui.Model)
+2016-09-27 17:41:46.551  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleProduceList]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.redirectRoot()
+2016-09-27 17:41:46.554  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-09-27 17:41:46.554  INFO 8164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-09-27 17:41:46.624  INFO 8164 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-27 17:41:46.625  INFO 8164 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-27 17:41:46.700  INFO 8164 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-27 17:41:46.749  INFO 8164 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2016-09-27 17:41:46.960  INFO 8164 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-09-27 17:41:47.053  INFO 8164 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-09-27 17:41:47.069  INFO 8164 --- [main] c.mum.config.EaKitchenClientApplication  : Started EaKitchenClientApplication in 4.294 seconds (JVM running for 4.757)
+2016-09-27 17:41:56.883  INFO 8164 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-09-27 17:41:56.884  INFO 8164 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-09-27 17:41:56.907  INFO 8164 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2016-09-27 17:42:03.334 ERROR 8164 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+
+java.lang.NullPointerException: null
+	at com.mum.controller.HomeController.loginUser(HomeController.java:51) ~[classes/:na]
+	at com.mum.controller.HomeController$$FastClassBySpringCGLIB$$14d979f7.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204) ~[spring-core-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720) ~[spring-aop-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157) ~[spring-aop-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52) ~[spring-aop-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92) ~[spring-aop-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655) ~[spring-aop-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at com.mum.controller.HomeController$$EnhancerBySpringCGLIB$$405ca4cf.loginUser(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:114) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_77]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_77]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_77]
+
+2016-09-27 17:53:27.648  INFO 8164 --- [RMI TCP Connection(17)-10.10.13.20] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2016-09-27 17:53:27.649  INFO 8164 --- [RMI TCP Connection(17)-10.10.13.20] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@158d2680: startup date [Tue Sep 27 17:41:43 CDT 2016]; root of context hierarchy
+2016-09-27 17:53:27.652  INFO 8164 --- [RMI TCP Connection(17)-10.10.13.20] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-09-27 17:53:38.024  INFO 2604 --- [main] c.mum.config.EaKitchenClientApplication  : Starting EaKitchenClientApplication on DESKTOP-B1IAO1L with PID 2604 (F:\Study\EA\Project\EA\EA_Kitchen_Client\target\classes started by bandeshor in F:\Study\EA\Project\EA\EA_Kitchen_Client)
+2016-09-27 17:53:38.028  INFO 2604 --- [main] c.mum.config.EaKitchenClientApplication  : No active profile set, falling back to default profiles: default
+2016-09-27 17:53:38.129  INFO 2604 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@158d2680: startup date [Tue Sep 27 17:53:38 CDT 2016]; root of context hierarchy
+2016-09-27 17:53:39.961  INFO 2604 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-09-27 17:53:39.971  INFO 2604 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-09-27 17:53:39.972  INFO 2604 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.5
+2016-09-27 17:53:40.246  INFO 2604 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2016-09-27 17:53:40.249  INFO 2604 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-09-27 17:53:40.250  INFO 2604 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2125 ms
+2016-09-27 17:53:40.482  INFO 2604 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-09-27 17:53:40.489  INFO 2604 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-09-27 17:53:40.490  INFO 2604 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-09-27 17:53:40.490  INFO 2604 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-09-27 17:53:40.490  INFO 2604 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-09-27 17:53:41.154  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@158d2680: startup date [Tue Sep 27 17:53:38 CDT 2016]; root of context hierarchy
+2016-09-27 17:53:41.251  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/addFoodToSchedule/{scheduleId}],methods=[GET]}" onto public java.lang.String com.mum.controller.AddFoodToScheduleController.getAddedFoodSchedule(int,org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2016-09-27 17:53:41.252  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/addFoodToSchedule/{scheduleId}],methods=[POST]}" onto public java.lang.String com.mum.controller.AddFoodToScheduleController.postFoodSchedule(int,java.lang.String[],java.lang.String[],org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2016-09-27 17:53:41.254  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/checkAvailability]}" onto public void com.mum.controller.CustomerController.checkAvailability(int,java.util.Date)
+2016-09-27 17:53:41.254  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/saveschedulekitchen],methods=[POST]}" onto public java.lang.String com.mum.controller.CustomerController.saveschedulekitchen(com.mum.model.Schedule,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2016-09-27 17:53:41.254  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/availableKitchen]}" onto public java.lang.String com.mum.controller.CustomerController.availableKitchen(com.mum.model.Address)
+2016-09-27 17:53:41.255  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/schedulekitchen],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.CustomerController.schedulekitchen(int,javax.servlet.http.HttpSession)
+2016-09-27 17:53:41.255  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleList],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.CustomerController.scheduleList(javax.servlet.http.HttpSession)
+2016-09-27 17:53:41.255  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/searchKitchen],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.CustomerController.searchKitchen(java.lang.String,javax.servlet.http.HttpSession)
+2016-09-27 17:53:41.256  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customer]}" onto public java.lang.String com.mum.controller.CustomerController.CustomerMainPage()
+2016-09-27 17:53:41.263  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error/{message}],methods=[GET]}" onto public java.lang.String com.mum.controller.ErrorDisplayController.setTheErrorPage(java.lang.String,org.springframework.ui.Model)
+2016-09-27 17:53:41.264  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/farmerProduceList],methods=[POST]}" onto public java.lang.String com.mum.controller.FarmerProduceController.addFarmerProducePage(org.springframework.ui.Model)
+2016-09-27 17:53:41.265  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/farmerProduceList],methods=[GET]}" onto public java.lang.String com.mum.controller.FarmerProduceController.getFarmerProducePage(org.springframework.ui.Model)
+2016-09-27 17:53:41.269  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home]}" onto public java.lang.String com.mum.controller.HomeController.home()
+2016-09-27 17:53:41.270  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.mum.controller.HomeController.viewLogin()
+2016-09-27 17:53:41.270  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.mum.controller.HomeController.mainPage()
+2016-09-27 17:53:41.271  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.HomeController.loginUser(com.mum.model.User,javax.servlet.http.HttpSession)
+2016-09-27 17:53:41.279  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/delete/{id}],methods=[GET]}" onto public java.lang.String com.mum.controller.KitchenController.delete(int,org.springframework.ui.Model)
+2016-09-27 17:53:41.280  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/add],methods=[POST]}" onto public java.lang.String com.mum.controller.KitchenController.addKitchenA(java.lang.String,java.lang.String,com.mum.model.KitchenType,java.lang.String,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2016-09-27 17:53:41.281  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/edit],methods=[POST]}" onto public java.lang.String com.mum.controller.KitchenController.edit(java.lang.String,int,java.lang.String,com.mum.model.KitchenType,java.lang.String,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2016-09-27 17:53:41.284  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/edit/{id}],methods=[GET]}" onto public java.lang.String com.mum.controller.KitchenController.edit(int,org.springframework.ui.Model)
+2016-09-27 17:53:41.285  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/add],methods=[GET]}" onto public java.lang.String com.mum.controller.KitchenController.addKitchen()
+2016-09-27 17:53:41.286  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/list]}" onto public java.lang.String com.mum.controller.KitchenController.getAllKitchen(org.springframework.ui.Model)
+2016-09-27 17:53:41.288  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/produceList],methods=[GET]}" onto public java.lang.String com.mum.controller.ProduceController.getProducePage(org.springframework.ui.Model)
+2016-09-27 17:53:41.289  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/produceList],methods=[POST]}" onto public java.lang.String com.mum.controller.ProduceController.addProducePage(int,int)
+2016-09-27 17:53:41.291  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleProduceList],methods=[GET]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.getScheduleProducePage(org.springframework.ui.Model)
+2016-09-27 17:53:41.292  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleProduceList],methods=[POST]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.addScheduleProducePage(int,int)
+2016-09-27 17:53:41.292  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleFarmerProduceList],methods=[GET]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.getScheduleFarmerProducePage(org.springframework.ui.Model)
+2016-09-27 17:53:41.292  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleProduceList]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.redirectRoot()
+2016-09-27 17:53:41.298  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-09-27 17:53:41.298  INFO 2604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-09-27 17:53:41.393  INFO 2604 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-27 17:53:41.394  INFO 2604 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-27 17:53:41.445  INFO 2604 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-27 17:53:41.479  INFO 2604 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2016-09-27 17:53:41.663  INFO 2604 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-09-27 17:53:41.751  INFO 2604 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-09-27 17:53:41.761  INFO 2604 --- [main] c.mum.config.EaKitchenClientApplication  : Started EaKitchenClientApplication in 4.153 seconds (JVM running for 4.597)
+2016-09-27 17:53:48.722  INFO 2604 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-09-27 17:53:48.723  INFO 2604 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-09-27 17:53:48.742  INFO 2604 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+2016-09-27 17:54:10.658 ERROR 2604 --- [http-nio-8080-exec-6] o.a.c.c.C.[.[localhost].[/].[jsp]        : Servlet.service() for servlet jsp threw exception
+
+org.apache.jasper.JasperException: /WEB-INF/AddFoodToSchedule.jsp (line: 41, column: 60) Unterminated ${ tag
+	at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:41) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.ErrorDispatcher.dispatch(ErrorDispatcher.java:291) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.ErrorDispatcher.jspError(ErrorDispatcher.java:97) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Parser.parseELExpression(Parser.java:770) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Parser.parseElements(Parser.java:1466) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Parser.parse(Parser.java:145) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.ParserController.doParse(ParserController.java:244) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.ParserController.parse(ParserController.java:105) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Compiler.generateJava(Compiler.java:201) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:333) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:600) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:368) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) [tomcat-embed-websocket-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) [spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) [spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) [spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) [spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:726) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:394) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:168) [spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303) [spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1257) [spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1037) [spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980) [spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897) [spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) [spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) [spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) [spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) [tomcat-embed-websocket-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89) [spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77) [spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) [spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_77]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_77]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_77]
+
+2016-09-27 17:54:10.660 ERROR 2604 --- [http-nio-8080-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [/WEB-INF/AddFoodToSchedule.jsp (line: 41, column: 60) Unterminated ${ tag] with root cause
+
+org.apache.jasper.JasperException: /WEB-INF/AddFoodToSchedule.jsp (line: 41, column: 60) Unterminated ${ tag
+	at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:41) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.ErrorDispatcher.dispatch(ErrorDispatcher.java:291) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.ErrorDispatcher.jspError(ErrorDispatcher.java:97) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Parser.parseELExpression(Parser.java:770) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Parser.parseElements(Parser.java:1466) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Parser.parse(Parser.java:145) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.ParserController.doParse(ParserController.java:244) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.ParserController.parse(ParserController.java:105) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Compiler.generateJava(Compiler.java:201) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:333) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:600) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:368) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:726) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:394) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:168) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1257) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1037) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_77]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_77]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_77]
+
+2016-09-27 17:56:25.648  INFO 2604 --- [RMI TCP Connection(8)-10.10.13.20] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2016-09-27 17:56:25.649  INFO 2604 --- [RMI TCP Connection(8)-10.10.13.20] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@158d2680: startup date [Tue Sep 27 17:53:38 CDT 2016]; root of context hierarchy
+2016-09-27 17:56:25.651  INFO 2604 --- [RMI TCP Connection(8)-10.10.13.20] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-09-27 17:56:40.152  INFO 9000 --- [main] c.mum.config.EaKitchenClientApplication  : Starting EaKitchenClientApplication on DESKTOP-B1IAO1L with PID 9000 (F:\Study\EA\Project\EA\EA_Kitchen_Client\target\classes started by bandeshor in F:\Study\EA\Project\EA\EA_Kitchen_Client)
+2016-09-27 17:56:40.155  INFO 9000 --- [main] c.mum.config.EaKitchenClientApplication  : No active profile set, falling back to default profiles: default
+2016-09-27 17:56:40.218  INFO 9000 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@158d2680: startup date [Tue Sep 27 17:56:40 CDT 2016]; root of context hierarchy
+2016-09-27 17:56:41.838  INFO 9000 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-09-27 17:56:41.851  INFO 9000 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-09-27 17:56:41.852  INFO 9000 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.5
+2016-09-27 17:56:42.154  INFO 9000 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2016-09-27 17:56:42.159  INFO 9000 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-09-27 17:56:42.159  INFO 9000 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1946 ms
+2016-09-27 17:56:42.380  INFO 9000 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-09-27 17:56:42.384  INFO 9000 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-09-27 17:56:42.385  INFO 9000 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-09-27 17:56:42.385  INFO 9000 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-09-27 17:56:42.385  INFO 9000 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-09-27 17:56:43.055  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@158d2680: startup date [Tue Sep 27 17:56:40 CDT 2016]; root of context hierarchy
+2016-09-27 17:56:43.149  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/addFoodToSchedule/{scheduleId}],methods=[GET]}" onto public java.lang.String com.mum.controller.AddFoodToScheduleController.getAddedFoodSchedule(int,org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2016-09-27 17:56:43.150  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/addFoodToSchedule/{scheduleId}],methods=[POST]}" onto public java.lang.String com.mum.controller.AddFoodToScheduleController.postFoodSchedule(int,java.lang.String[],java.lang.String[],org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2016-09-27 17:56:43.151  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/saveschedulekitchen],methods=[POST]}" onto public java.lang.String com.mum.controller.CustomerController.saveschedulekitchen(com.mum.model.Schedule,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2016-09-27 17:56:43.152  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/checkAvailability]}" onto public void com.mum.controller.CustomerController.checkAvailability(int,java.util.Date)
+2016-09-27 17:56:43.152  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customer]}" onto public java.lang.String com.mum.controller.CustomerController.CustomerMainPage()
+2016-09-27 17:56:43.153  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/searchKitchen],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.CustomerController.searchKitchen(java.lang.String,javax.servlet.http.HttpSession)
+2016-09-27 17:56:43.153  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/availableKitchen]}" onto public java.lang.String com.mum.controller.CustomerController.availableKitchen(com.mum.model.Address)
+2016-09-27 17:56:43.153  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/schedulekitchen],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.CustomerController.schedulekitchen(int,javax.servlet.http.HttpSession)
+2016-09-27 17:56:43.153  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleList],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.CustomerController.scheduleList(javax.servlet.http.HttpSession)
+2016-09-27 17:56:43.154  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error/{message}],methods=[GET]}" onto public java.lang.String com.mum.controller.ErrorDisplayController.setTheErrorPage(java.lang.String,org.springframework.ui.Model)
+2016-09-27 17:56:43.155  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/farmerProduceList],methods=[GET]}" onto public java.lang.String com.mum.controller.FarmerProduceController.getFarmerProducePage(org.springframework.ui.Model)
+2016-09-27 17:56:43.155  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/farmerProduceList],methods=[POST]}" onto public java.lang.String com.mum.controller.FarmerProduceController.addFarmerProducePage(org.springframework.ui.Model)
+2016-09-27 17:56:43.157  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home]}" onto public java.lang.String com.mum.controller.HomeController.home()
+2016-09-27 17:56:43.158  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.mum.controller.HomeController.mainPage()
+2016-09-27 17:56:43.158  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.mum.controller.HomeController.viewLogin()
+2016-09-27 17:56:43.158  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.mum.controller.HomeController.loginUser(com.mum.model.User,javax.servlet.http.HttpSession)
+2016-09-27 17:56:43.161  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/delete/{id}],methods=[GET]}" onto public java.lang.String com.mum.controller.KitchenController.delete(int,org.springframework.ui.Model)
+2016-09-27 17:56:43.162  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/add],methods=[POST]}" onto public java.lang.String com.mum.controller.KitchenController.addKitchenA(java.lang.String,java.lang.String,com.mum.model.KitchenType,java.lang.String,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2016-09-27 17:56:43.162  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/edit],methods=[POST]}" onto public java.lang.String com.mum.controller.KitchenController.edit(java.lang.String,int,java.lang.String,com.mum.model.KitchenType,java.lang.String,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2016-09-27 17:56:43.162  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/edit/{id}],methods=[GET]}" onto public java.lang.String com.mum.controller.KitchenController.edit(int,org.springframework.ui.Model)
+2016-09-27 17:56:43.162  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/list]}" onto public java.lang.String com.mum.controller.KitchenController.getAllKitchen(org.springframework.ui.Model)
+2016-09-27 17:56:43.163  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kitchen/add],methods=[GET]}" onto public java.lang.String com.mum.controller.KitchenController.addKitchen()
+2016-09-27 17:56:43.163  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/produceList],methods=[POST]}" onto public java.lang.String com.mum.controller.ProduceController.addProducePage(int,int)
+2016-09-27 17:56:43.163  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/produceList],methods=[GET]}" onto public java.lang.String com.mum.controller.ProduceController.getProducePage(org.springframework.ui.Model)
+2016-09-27 17:56:43.164  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleProduceList],methods=[GET]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.getScheduleProducePage(org.springframework.ui.Model)
+2016-09-27 17:56:43.165  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleFarmerProduceList],methods=[GET]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.getScheduleFarmerProducePage(org.springframework.ui.Model)
+2016-09-27 17:56:43.165  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleProduceList],methods=[POST]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.addScheduleProducePage(int,int)
+2016-09-27 17:56:43.165  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scheduleProduceList]}" onto public java.lang.String com.mum.controller.ScheduleFarmerProduceController.redirectRoot()
+2016-09-27 17:56:43.167  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-09-27 17:56:43.167  INFO 9000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-09-27 17:56:43.236  INFO 9000 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-27 17:56:43.239  INFO 9000 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-27 17:56:43.307  INFO 9000 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-27 17:56:43.353  INFO 9000 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2016-09-27 17:56:43.548  INFO 9000 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-09-27 17:56:43.641  INFO 9000 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-09-27 17:56:43.654  INFO 9000 --- [main] c.mum.config.EaKitchenClientApplication  : Started EaKitchenClientApplication in 3.911 seconds (JVM running for 4.362)
+2016-09-27 17:57:04.920  INFO 9000 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-09-27 17:57:04.920  INFO 9000 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-09-27 17:57:04.944  INFO 9000 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2016-09-27 17:57:19.473 ERROR 9000 --- [http-nio-8080-exec-5] o.a.c.c.C.[.[localhost].[/].[jsp]        : Servlet.service() for servlet jsp threw exception
+
+org.apache.jasper.JasperException: /WEB-INF/AddFoodToSchedule.jsp (line: 49, column: 30) Unterminated ${ tag
+	at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:41) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.ErrorDispatcher.dispatch(ErrorDispatcher.java:291) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.ErrorDispatcher.jspError(ErrorDispatcher.java:97) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Parser.parseELExpression(Parser.java:770) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Parser.parseElements(Parser.java:1466) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Parser.parseBody(Parser.java:1686) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Parser.parseOptionalBody(Parser.java:1019) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Parser.parseCustomTag(Parser.java:1294) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Parser.parseElements(Parser.java:1473) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Parser.parse(Parser.java:145) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.ParserController.doParse(ParserController.java:244) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.ParserController.parse(ParserController.java:105) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Compiler.generateJava(Compiler.java:201) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:333) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:600) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:368) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) [tomcat-embed-websocket-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) [spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) [spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) [spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) [spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:726) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:394) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:168) [spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303) [spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1257) [spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1037) [spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980) [spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897) [spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) [spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) [spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) [spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) [tomcat-embed-websocket-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89) [spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77) [spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) [spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_77]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_77]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_77]
+
+2016-09-27 17:57:19.475 ERROR 9000 --- [http-nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [/WEB-INF/AddFoodToSchedule.jsp (line: 49, column: 30) Unterminated ${ tag] with root cause
+
+org.apache.jasper.JasperException: /WEB-INF/AddFoodToSchedule.jsp (line: 49, column: 30) Unterminated ${ tag
+	at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:41) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.ErrorDispatcher.dispatch(ErrorDispatcher.java:291) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.ErrorDispatcher.jspError(ErrorDispatcher.java:97) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Parser.parseELExpression(Parser.java:770) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Parser.parseElements(Parser.java:1466) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Parser.parseBody(Parser.java:1686) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Parser.parseOptionalBody(Parser.java:1019) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Parser.parseCustomTag(Parser.java:1294) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Parser.parseElements(Parser.java:1473) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Parser.parse(Parser.java:145) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.ParserController.doParse(ParserController.java:244) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.ParserController.parse(ParserController.java:105) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Compiler.generateJava(Compiler.java:201) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:333) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:600) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:368) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329) ~[tomcat-embed-jasper-8.5.5.jar:8.5.5]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:726) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:394) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:168) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1257) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1037) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_77]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_77]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.5.jar:8.5.5]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_77]
+
+=======
 2016-09-27 17:45:35.143  INFO 14096 --- [http-nio-8080-exec-4] com.mum.controller.ProduceController     : Method getProducePage has been called
+<<<<<<< HEAD
 2016-09-27 18:18:53.864  INFO 14096 --- [RMI TCP Connection(2)-10.10.14.2] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
 2016-09-27 18:18:53.866  INFO 14096 --- [RMI TCP Connection(2)-10.10.14.2] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7f0eb4b4: startup date [Tue Sep 27 17:31:15 CDT 2016]; root of context hierarchy
 2016-09-27 18:18:53.880  INFO 14096 --- [RMI TCP Connection(2)-10.10.14.2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
@@ -1201,3 +2313,6 @@ Action:
 
 Consider defining a bean of type 'com.mum.validator.DateValidator' in your configuration.
 
+=======
+>>>>>>> branch 'master' of https://github.com/Klaudioz/EA.git
+>>>>>>> branch 'master' of https://github.com/Klaudioz/EA.git

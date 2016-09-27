@@ -40,7 +40,7 @@ public class AddFoodToScheduleController {
 		model.addAttribute("produces",produceDAO.getProduces());
 		
 		
-		return "AddFoodToSchedule/"+scheduleId;
+		return "AddFoodToSchedule";
 	}
 	
 	@RequestMapping(value="/addFoodToSchedule/{scheduleId}", method=RequestMethod.POST)
@@ -87,7 +87,7 @@ public class AddFoodToScheduleController {
 			
 		}
 		
-		return "redirect:/AddFoodToSchedule/"+scheduleId;
+		return "redirect:/AddFoodToSchedule";
 	}
 
 }
