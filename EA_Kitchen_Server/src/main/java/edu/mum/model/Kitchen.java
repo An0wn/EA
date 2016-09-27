@@ -10,16 +10,20 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.validation.constraints.*;
 
 @Entity
 public class Kitchen {
-
 	@Id
 	@GeneratedValue
 	private int kitchenId;
-
+	@NotNull
+	@Size(max = 64)
 	private String kitchenName;
+	@NotNull
+
 	private String Address;
+	@NotNull
 	private String city;
 
 	/*@OneToOne(mappedBy = "kitchen")

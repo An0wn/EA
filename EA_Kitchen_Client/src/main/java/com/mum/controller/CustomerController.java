@@ -47,7 +47,8 @@ public class CustomerController {
 		} else {
 			session.setAttribute("kitchens", kitchens);
 			mav.addObject("kitchens", kitchens);
-			mav.setViewName("kitchenList");
+
+			mav.setViewName("SearchKitchedList");
 		}
 		// redirect.addFlashAttribute("kitchens",kitchens);
 		// return

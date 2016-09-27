@@ -35,7 +35,7 @@ public class KitchenController {
 		model.addAttribute("kitchens", kitchenService.getAllKitchen());
 		return "kitchenList";
 	}
-
+ 
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public String addKitchen() {
 		return "addKitchen";

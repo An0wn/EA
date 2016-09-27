@@ -1,3 +1,4 @@
+
 <jsp:include page="header.jsp" flush="true">
 	<jsp:param name="title" value="KBNB Company, Rent Kitchen" />
 </jsp:include>

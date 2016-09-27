@@ -61,7 +61,7 @@ public class KitchenController {
 		return kitchenService.findOne(id);
 	}
 	
-	@RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
+	@RequestMapping(value = "/delete", method = RequestMethod.GET)
 	public void delete(@PathVariable("id") int id){
 		kitchenService.delete(id);
 	}

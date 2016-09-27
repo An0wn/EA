@@ -1,6 +1,13 @@
-<jsp:include page="header.jsp" flush="true">
- <jsp:param name="title" value="Add Food To Schedule"/>
-</jsp:include>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Schedule Produce List</title>
+</head>
+<body>
 
 <script>
 	function addFood(){
@@ -38,7 +45,8 @@
 			<div id="selectProduce">
 					<select id="selectProduce" name="produces[]">
 		   				<c:forEach var="produce" items="${produces}">
-		       				<option value="${produce.produceId} selected=${produce.produceId == selectedProduceId ? 'selected' : ''">${produce.produceName}</option>
+		       				<option value="${produce.produceId}" >${produce.produceName}</option>
+		       				<!-- selected="${produce.produceId == selectedProduceId ? 'selected' : ''" -->
 		   				</c:forEach>
 					</select>
 					<input type="number" min="1" name="quantity[]">
@@ -54,11 +62,5 @@
 
 	</div>
 
-
-
-	<script
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-		crossorigin="anonymous"></script>
 </body>
 </html>

@@ -46,9 +46,12 @@ public class KitchenService {
 		 
 	}
 	public void deleteOne(int id) {		
-		 restTemplate.postForObject(deleteKitchen,id, Kitchen.class);
-		 
+		// restTemplate.getForObject(deleteKitchen, Kitchen.class,id);
+		 ResponseEntity<Void> response = restTemplate.exchange(deleteKitchen+"/"+id, HttpMethod.DELETE,
+                 null, Void.class);
+		 Void body = response.getBody();
 	}
+	
 	public void Add(Kitchen kitchen) {
 		restTemplate.postForLocation(addKitchen, kitchen, Kitchen.class);
 	}

@@ -4,19 +4,19 @@
 
 	<div class="container">
 		<h1>Add kitchen</h1>
-		<form class="form" action="add" method="post">
+		<form class="form" action="add" method="post" data-toggle="validator">
 			<div class="form-group">
 				<label class="col-sm-2 control-label" for="KitchenName">KitchenName</label>
 				<div class="col-sm-10">
 					<input class="form-control" type="text" id="KitchenName"
-						placeholder="KitchenName" name="kitchenName">
+						placeholder="KitchenName" name="kitchenName" required>
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="col-sm-2 control-label" for="city">city</label>
 				<div class="col-sm-10">
 					<input class="form-control" type="text" id="city"
-						placeholder="city" name="city">
+						placeholder="city" name="city" required>
 				</div>
 			</div>
 			<div class="form-group">
@@ -34,7 +34,7 @@
 				<label class="col-sm-2 control-label" for="address">address</label>
 				<div class="col-sm-10">
 					<input class="form-control" type="text" id="address"
-						placeholder="address" name="address">
+						placeholder="address" name="address" required>
 				</div>
 			</div>
 			<input type="submit" value="Add kitchen" />
