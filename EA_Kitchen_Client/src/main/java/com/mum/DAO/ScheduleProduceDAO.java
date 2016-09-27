@@ -30,4 +30,16 @@ public class ScheduleProduceDAO implements IScheduleProduceDAO{
 		return service.getScheduleProduceList(EaKitchenClientApplication.logginInUserId);
 	}
 
+	@Override
+	public List<ScheduleProduce> getScheduleProduceForSchedule(int scheduleId) {
+		// TODO Auto-generated method stub
+		return service.getScheduleProduceListForCustomerAndSchedule(EaKitchenClientApplication.logginInUserId, scheduleId);
+	}
+
+	@Override
+	public void saveScheduleProduce(ScheduleProduce scheduleProduce) {
+		// TODO Auto-generated method stub
+		service.saveScheduleProduce(scheduleProduce);
+	}
+
 }

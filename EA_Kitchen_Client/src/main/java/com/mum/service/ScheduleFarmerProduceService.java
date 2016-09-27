@@ -15,6 +15,7 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
 import com.mum.config.AppConfig;
+import com.mum.model.Kitchen;
 import com.mum.model.Produce;
 import com.mum.model.Schedule;
 import com.mum.model.ScheduleFarmerProduce;
@@ -35,6 +36,12 @@ public class ScheduleFarmerProduceService {
 	public List<ScheduleProduce> getScheduleProduceList(int farmerId){
 		ParameterizedTypeReference<List<ScheduleProduce>> typeRef = new ParameterizedTypeReference<List<ScheduleProduce>>() {};
 		ResponseEntity<List<ScheduleProduce>> response = restTemplate.exchange(ScheduleProduceURL+"/"+farmerId, HttpMethod.GET, null, typeRef);
+		return response.getBody();
+	}
+	
+	public List<ScheduleProduce> getScheduleProduceListForCustomerAndSchedule(int customerId,int scheduleId){
+		ParameterizedTypeReference<List<ScheduleProduce>> typeRef = new ParameterizedTypeReference<List<ScheduleProduce>>() {};
+		ResponseEntity<List<ScheduleProduce>> response = restTemplate.exchange(ScheduleProduceURL+"/"+customerId+"/"+scheduleId, HttpMethod.GET, null, typeRef);
 		return response.getBody();
 	}
 	
@@ -59,6 +66,10 @@ public class ScheduleFarmerProduceService {
 		//restTemplate.postForObject(ScheduleFarmerProduceURL+"/{id}/{quantity}", id,quantity, ScheduleFarmerProduce.class);
 	}	
 	
+	
+	public void saveScheduleProduce(ScheduleProduce scheduleProduce){
+		restTemplate.postForLocation(ScheduleProduceURL, scheduleProduce, ScheduleProduce.class);
+	}
 	
 	/*Schedule sc=new Schedule();
 	sc.setCity("Acity");
