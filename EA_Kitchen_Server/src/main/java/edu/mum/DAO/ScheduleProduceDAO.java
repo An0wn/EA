@@ -29,4 +29,10 @@ public interface ScheduleProduceDAO extends CrudRepository<ScheduleProduce, Long
 	@Transactional
 	@Query("UPDATE ScheduleProduce sc SET sc.remainingQuantity = :remQuantity WHERE sc.scheduleProduceId = :scheduleProduceId")
 	void updateRemainingQuantityFor(@Param("remQuantity") int remainingQuantity, @Param("scheduleProduceId") int scheduleProduceId);
+	
+	
+	@Query("SELECT sc FROM ScheduleProduce sc WHERE sc.schedule.scheduleId = :scheduleId AND "
+			+ "sc.schedule.customer.userId = :customerId ")
+	public List<ScheduleProduce> findByCustomerIdAndScheduleId(@Param("customerId") int customerId,
+			@Param("scheduleId") int scheduleId);
 }

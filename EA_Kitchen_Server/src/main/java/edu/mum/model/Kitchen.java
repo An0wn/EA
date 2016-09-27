@@ -9,11 +9,11 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.validation.constraints.*;
 
 @Entity
 public class Kitchen {
-
 	@Id
 	@GeneratedValue
 	private int kitchenId;
@@ -26,11 +26,13 @@ public class Kitchen {
 	@NotNull
 	private String city;
 
+	/*@OneToOne(mappedBy = "kitchen")
+	private Address address;*/
+
 	@OneToMany(mappedBy = "kitchen")
 	private List<Schedule> schedules = new ArrayList<Schedule>();
 
 	@Enumerated(EnumType.STRING)
-	@NotNull
 	private KitchenType kitchenType;
 
 	public KitchenType getKitchenType() {

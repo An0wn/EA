@@ -1,6 +1,7 @@
 <jsp:include page="header.jsp" flush="true">
 	<jsp:param name="title" value="Kitchen List" />
 </jsp:include>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <a href="add" class="btn btn-info">Add kitchen</a>
@@ -21,8 +22,9 @@
 			<td>${ kitchen.city}</td>
 			<td>${ kitchen.kitchenType}</td>
 			<td>${ kitchen.address}</td>
-			<td><a href="/kitchen/edit/${ kitchen.kitchenId}">Edit</a> <a
-				href="/kitchen/delete/${ kitchen.kitchenId}">Delete</a></td>
+			<td><a href="/kitchen/edit/${ kitchen.kitchenId}">Edit</a> 
+<!-- 			<A -->
+<%-- 				HREF="/KITCHEN/DELETE/${ KITCHEN.KITCHENID}">DELETE</A></td> --%>
 		</tr>
 	</c:forEach>
 </table>
