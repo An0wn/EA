@@ -29,6 +29,7 @@ public class ScheduleFarmerProduceController {
 	@Autowired
 	private ScheduleFarmerProduceDAO scheduleFarmerProduceDAO;
 	
+
 	@RequestMapping("/scheduleProduceList")
 	public String redirectRoot() {
 		return "redirect:/scheduleProduceList";
@@ -44,7 +45,7 @@ public class ScheduleFarmerProduceController {
 	public String addScheduleProducePage(@RequestParam("quantity") int quantity,@RequestParam("scheduleProduceId") int scheduleProduceId){
 		
 		String returnMessage=scheduleFarmerProduceDAO.addScheduleFarmerProduceWithIdAndQuantity(quantity, scheduleProduceId);
-		if(returnMessage.equals("")){//everyting is fine
+		if(returnMessage==null || returnMessage.equals("")){//everyting is fine
 			return "redirect:/scheduleFarmerProduceList";
 		}
 		else{//somthing went wrong, send a message

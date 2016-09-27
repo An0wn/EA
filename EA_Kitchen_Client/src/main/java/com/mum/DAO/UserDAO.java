@@ -16,5 +16,4 @@ public class UserDAO implements IUserDAO{
 	public User loginUser(User user) {
 		return userService.loginUser(user);
 	}
-
 }

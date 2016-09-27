@@ -2,10 +2,12 @@
 package edu.mum.controllers;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -29,8 +31,8 @@ public class KitchenController {
 	private IKitchenDAO kitchenService;
 
 	@RequestMapping(value = "/getAllKitchen", method = RequestMethod.GET)
-	public @ResponseBody Collection<Kitchen> getAllKitchen() {
-		return (Collection<Kitchen>) kitchenService.findAll();
+	public @ResponseBody List<Kitchen> getAllKitchen() {
+		return  (List<Kitchen>) kitchenService.findAll();
 
 	}
 
@@ -49,8 +51,18 @@ public class KitchenController {
 	public void add(@RequestBody Kitchen kitchen) {
 		kitchenService.save(kitchen);
 	}
-	@RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
-	public void delete(@RequestParam("id") int id){
+	@RequestMapping(value = "/edit", method = RequestMethod.POST)
+	@ResponseStatus(HttpStatus.CREATED)
+	public void Edit(@RequestBody Kitchen kitchen){
+		kitchenService.save(kitchen);
+	}
+	@RequestMapping(value = "/find/{id}", method = RequestMethod.GET)
+	public @ResponseBody Kitchen findOne(@PathVariable("id") int id){
+		return kitchenService.findOne(id);
+	}
+	
+	@RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
+	public void delete(@PathVariable("id") int id){
 		kitchenService.delete(id);
 	}
 

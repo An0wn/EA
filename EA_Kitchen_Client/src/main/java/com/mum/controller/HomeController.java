@@ -28,6 +28,10 @@ public class HomeController {
 		model.addAttribute("name", name);
 		return "home";
 	}
+	@RequestMapping("/")
+	public String home(){
+		return "home";
+	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String viewLogin() {

@@ -21,4 +21,6 @@ public class UserService {
 		return restTemplate.postForObject(userbyUserNameURL, user, User.class);
 	}
 
+
 }
+

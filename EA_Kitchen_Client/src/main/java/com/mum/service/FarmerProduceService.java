@@ -15,8 +15,8 @@ import com.mum.model.FarmerProduce;
 @Component
 public class FarmerProduceService {
 	
-	private static final String FarmerProduceListURL = AppConfig.ServerUrl+"/FarmerProduce/";//{farmerId}";
-	private static final String FarmerProduceURL = AppConfig.ServerUrl+"/FarmerProduce";
+	private static final String FarmerProduceListURL = AppConfig.ServerUrl+"/farmerProduce/";//{farmerId}";
+	private static final String FarmerProduceURL = AppConfig.ServerUrl+"/farmerProduce";
 	
 	@Autowired
 	private RestTemplate restTemplate;

@@ -5,7 +5,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.mum.EaKitchenClientApplication;
+import com.mum.config.EaKitchenClientApplication;
 import com.mum.model.ScheduleFarmerProduce;
 import com.mum.service.ScheduleFarmerProduceService;
 
