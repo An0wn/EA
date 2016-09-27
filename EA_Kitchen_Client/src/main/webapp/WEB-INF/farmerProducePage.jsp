@@ -1,3 +1,7 @@
+<jsp:include page="header.jsp" flush="true">
+	<jsp:param name="title" value="Farmer Produce List" />
+</jsp:include>
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -13,34 +17,28 @@
 </head>
 <body>
 	<h1>Farmer Produce</h1>
-	<!-- <a href="add" class="btn btn-info">Add kitchen</a> -->
-	<table class="table table-striped">
-		<thead>
-			<table>
-				<tr>
-					<th>Farmer name</th>
-					<th>Quantity</th>
-					<th>Quantity Available</th>
-					<th>Produce Name</th>
-					<th>Price</th>
-				</tr>
-				</thead>
-					<c:forEach var="farmerProduce" items="${farmerProduces}">
-						<tr>
-							<td>${farmerProduce.farmer.username}</td>
-							<td>${farmerProduce.quantity}</td>
-							<td>${farmerProduce.remainingQuantity}</td>
-							<td>${farmerProduce.produce.produceName}</td>
-							<td>${farmerProduce.date}</td>
-
-							<%-- <td><a href="scheduleProduceAccept/${scheduleProduce.scheduleProduceId} }">Accept</a></td> --%>
-						</tr>
-					</c:forEach>
-			</table>
-			<!-- <a href="/farmerProducesList">List of accepted produces</a> -->
-			<script
-				src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-				integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-				crossorigin="anonymous"></script>
+	<table class="table table-bordered">
+		<tr>
+			<th>Farmer name</th>
+			<th>Quantity</th>
+			<th>Quantity Available</th>
+			<th>Produce Name</th>
+			<th>Price</th>
+		</tr>
+		<c:forEach var="farmerProduce" items="${farmerProduces}">
+			<tr>
+				<td>${farmerProduce.farmer.username}</td>
+				<td>${farmerProduce.quantity}</td>
+				<td>${farmerProduce.remainingQuantity}</td>
+				<td>${farmerProduce.produce.produceName}</td>
+				<td>${farmerProduce.date}</td>
+			</tr>
+		</c:forEach>
+		<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+			integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+			crossorigin="anonymous"></script>
 </body>
 </html>
+
+<jsp:include page="footer.jsp" flush="true" />

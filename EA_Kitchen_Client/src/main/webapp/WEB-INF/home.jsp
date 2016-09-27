@@ -6,10 +6,13 @@
 <div class="container">
 
 	<div class="starter-template">
-		<h1>Bootstrap starter template</h1>
-		<p class="lead">
-			Use this document as a way to quickly start any new project.<br>
-			All you get is this text and a mostly barebones HTML document.
+		<h1>Community Kitchen KBNB</h1>
+		<br>
+		<p class="lead" align="left">
+			- Create scheduling app to easily sign up for the local shared kitchen spaces and see when available, cost, etc.<br>
+			- Create SE Iowa Food Hub app that helps to allocate extra produce from local farmers, gives them updates when to bring to SE Food Hub, and tracks how much total has come in.<br>
+			- Group order allocation scheduling and delivery.<br>
+			- Kbnb to rent out commercial or regular kitchen spaces.<br>
 		</p>
 	</div>
 
