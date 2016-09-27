@@ -1,4 +1,4 @@
-<jsp:include page="header.jsp" flush="true">
+<jsp:include page="Customerheader.jsp" flush="true">
 	<jsp:param name="title" value=" Schedule Kitchen" />
 </jsp:include><%@taglib prefix="form"
 	uri="http://www.springframework.org/tags/form"%>

@@ -1162,3 +1162,4 @@ java.lang.IllegalArgumentException: Not enough variable values available to expa
 2016-09-27 17:17:43.889  INFO 484 --- [http-nio-8080-exec-1] com.mum.controller.ProduceController     : Method getProducePage has been called
 2016-09-27 17:17:44.455  INFO 484 --- [http-nio-8080-exec-2] c.m.controller.FarmerProduceController   : Method getFarmerProducePage has been called
 >>>>>>> branch 'master' of https://github.com/Klaudioz/EA.git
+2016-09-27 17:45:35.143  INFO 14096 --- [http-nio-8080-exec-4] com.mum.controller.ProduceController     : Method getProducePage has been called
