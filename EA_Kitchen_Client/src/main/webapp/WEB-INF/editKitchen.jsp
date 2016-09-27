@@ -4,21 +4,21 @@
 
 <div class="container">
 		<h1>Edit kitchen</h1>
-		<form class="form" action="/kitchen/edit" method="post">
+		<form class="form" action="/kitchen/edit" method="post" data-toggle="validator">
 			<input type="hidden" value="${kitchen.kitchenId}" name="kitchenId">
 			<div class="form-group">
 				<label class="col-sm-2 control-label" for="KitchenName">KitchenName</label>
 				<div class="col-sm-10">
 					<input class="form-control" type="text" id="KitchenName"
 						value="${kitchen.kitchenName}" placeholder="KitchenName"
-						name="kitchenName">
+						name="kitchenName" required>
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="col-sm-2 control-label" for="city">city</label>
 				<div class="col-sm-10">
 					<input class="form-control" type="text" value="${kitchen.city}"
-						id="city" placeholder="city" name="city">
+						id="city" placeholder="city" name="city" required>
 				</div>
 			</div>
 			<div class="form-group">
@@ -35,7 +35,7 @@
 				<label class="col-sm-2 control-label" for="address">address</label>
 				<div class="col-sm-10">
 					<input class="form-control" type="text" id="address"
-						placeholder="address" value="${kitchen.address}" name="address">
+						placeholder="address" value="${kitchen.address}" name="address" required>
 				</div>
 			</div>
 			<input type="submit" value="Edit kitchen" />
