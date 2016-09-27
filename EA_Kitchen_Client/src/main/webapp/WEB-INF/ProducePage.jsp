@@ -1,3 +1,7 @@
+<jsp:include page="header.jsp" flush="true">
+	<jsp:param name="title" value="Produce List" />
+</jsp:include>
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -13,33 +17,30 @@
 </head>
 <body>
 	<h1>Produce</h1>
-	<!-- <a href="add" class="btn btn-info">Add kitchen</a> -->
-	<table class="table table-striped">
-		<thead>
-			<table>
-				<tr>
-					<th>Produce Name</th>
-					<th>Price</th>
-					<th>Action</th>
-				</tr>
-				</thead>
-					<c:forEach var="Produce" items="${Produces}">
-						<tr>
-							<td>${Produce.produceName}</td>
-							<td>${Produce.producePrice}</td>
-							<td>
-								<form action="/produceList" method="post">
-									<input type="number" name="quantity" min="1" /> <input
-										type="hidden" name="produceId" value="${Produce.produceId}" />
-									<input type="submit" value="Add" />
-								</form>
-							</td>
-						</tr>
-					</c:forEach>
-			</table>
-			<script
-				src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-				integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-				crossorigin="anonymous"></script>
+	<table class="table table-bordered">
+		<tr>
+			<th>Produce Name</th>
+			<th>Price</th>
+			<th>Action</th>
+		</tr>
+		<c:forEach var="Produce" items="${Produces}">
+			<tr>
+				<td>${Produce.produceName}</td>
+				<td>${Produce.producePrice}</td>
+				<td>
+					<form action="/produceList" method="post">
+						<input type="number" name="quantity" min="1"/>
+						<input type="hidden" name="produceId" value="${Produce.produceId}"/>
+						<input type="submit" value="Add" />
+					</form>
+				</td>
+			</tr>
+		</c:forEach>
+		<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+			integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+			crossorigin="anonymous"></script>
 </body>
 </html>
+
+<jsp:include page="footer.jsp" flush="true" />

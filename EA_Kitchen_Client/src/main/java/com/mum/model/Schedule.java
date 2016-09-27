@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 
 public class Schedule {
 	
@@ -34,10 +36,10 @@ public class Schedule {
 	
 	private Kitchen kitchen;
 	
-	
+	@DateTimeFormat(pattern = "yyyy-mm-dd")
 	private Date startDate;
 	
-	
+	@DateTimeFormat(pattern = "yyyy-mm-dd")
 	private Date endDate;
 	
 	

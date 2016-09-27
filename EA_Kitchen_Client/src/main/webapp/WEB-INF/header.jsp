@@ -54,6 +54,8 @@
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="/">Home</a></li>
 					<li><a href="/kitchen/list">Rent Kitchen</a></li>
+					<li><a href="/farmerProduceList">Farmer Produce List</a></li>
+					<li><a href="/produceList">Produce List</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</div>

@@ -2,16 +2,12 @@ package com.mum.model;
 
 public class User {
 
-	
 	private int userId;
-	
 	private String username;
 	private String password;
-	
 
 	private UserRole userRole;
-	
-	
+
 	public int getUserId() {
 		return userId;
 	}
@@ -42,5 +38,15 @@ public class User {
 
 	protected void setUserRole(UserRole userRole) {
 		this.userRole = userRole;
+	}
+
+	public User(User u) {
+		this.userId =u.userId;
+		this.username = u.username;
+		this.password = u.password;
+		this.userRole = u.userRole;
+	}
+
+	public User() {
 	}
 }
