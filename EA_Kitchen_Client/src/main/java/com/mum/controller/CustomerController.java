@@ -34,8 +34,8 @@ public class CustomerController {
 	@Resource
 	private ICustomer customer;
 
-	@Autowired
-	DateValidator dateValidator;
+	@Resource
+	private DateValidator dateValidator;
 
 	@RequestMapping("/customer")
 	public String CustomerMainPage() {
