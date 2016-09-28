@@ -6,11 +6,12 @@
 	<h2>Search Kitchen</h2>
 	<p>${error}</p>
 	<form action="/searchKitchen" method="get">
-			<label for="Address">Address</label> <input type="text"
-				name="Address" id="Address" required autofocus>
+		<label for="Address">Address</label> <input type="text" name="Address"
+			id="Address" required autofocus>
 
 		<button type="submit">Search</button>
 	</form>
 </div>
-
+<br />
+<div style="color: red;">${error}</div>
 <jsp:include page="footer.jsp" flush="true" />

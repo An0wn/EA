@@ -46,6 +46,7 @@ public class CustomerController {
 	public ModelAndView searchKitchen(@RequestParam("Address") String address,
 			HttpSession session/* , RedirectAttributes redirect */) {
 		ModelAndView mav = new ModelAndView();
+		mav.setViewName("customer");
 		List<Kitchen> kitchens = customer.searchKitchenByAddress(address);
 		if (kitchens.size() < 0) {
 			mav.addObject("error", "no kicthen in that area");
