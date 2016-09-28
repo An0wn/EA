@@ -16,7 +16,8 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 		"com.mum.model",
 		"com.mum.service",
 		"com.mum.config",
-		"com.mum.validator"})
+		"com.mum.validator",
+		"com.mum.security"})
 @SpringBootApplication
 public class EaKitchenClientApplication {
 

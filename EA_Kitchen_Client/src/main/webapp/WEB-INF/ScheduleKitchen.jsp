@@ -11,6 +11,7 @@
 	<br /> <br />
 	<form:form action="/saveschedulekitchen" method="post"
 		modelAttribute="schedule">
+	<%-- 	 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> --%>
 		Start Date<form:input type="date" path="startDate" />
 		<font color="red"><form:errors path="startDate" /></font>
 		<br />

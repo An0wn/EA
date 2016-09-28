@@ -16,7 +16,7 @@ import com.mum.model.Address;
 import com.mum.model.Kitchen;
 import com.mum.model.Produce;
 import com.mum.model.Schedule;
-import com.mum.model.User;
+import com.mum.model.UserOld;
 
 @Component
 public class CustomerService {

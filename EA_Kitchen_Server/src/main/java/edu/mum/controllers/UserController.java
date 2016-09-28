@@ -23,5 +23,10 @@ public class UserController {
 		return uer;
 
 	}
+	
+	@RequestMapping(value = "/loadUserByUserName", method = RequestMethod.POST)
+	public @ResponseBody User loadUserByUserName(@RequestBody String username) {
+		return userDAO.loadUserByUserName(username);
+	}
 
 }

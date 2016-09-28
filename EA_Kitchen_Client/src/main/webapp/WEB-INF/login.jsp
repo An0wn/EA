@@ -28,11 +28,11 @@
 			</div>
 		</form>
 	</div>
-<br/>
-	<div style="color: red;">${error }</div>
+	<br />
+	<div style="color: red;">${error }></div>
 
-	<!-- 	<#if error.isPresent()>
+	<#if error.isPresent()>
 	<p>The email or password you have entered is invalid, try again.</p>
-	</#if> -->
+	</#if>
 </body>
 </html>

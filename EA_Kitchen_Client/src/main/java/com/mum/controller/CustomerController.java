@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -91,7 +92,10 @@ public class CustomerController {
 		if (result.hasErrors()) {
 			return "ScheduleKitchen";
 		} else {
-			Customer loggedUser = new Customer((User) session.getAttribute("currentUser"));
+
+			User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+			Customer loggedUser = new Customer(user);
+			// session.getAttribute("currentUser"));
 			Kitchen k = (Kitchen) session.getAttribute("currentKitchen");
 			schedule.setCustomer(loggedUser);
 			schedule.setKitchen(k);
@@ -108,7 +112,10 @@ public class CustomerController {
 
 	@RequestMapping(value = "/scheduleList", method = RequestMethod.GET)
 	public ModelAndView scheduleList(HttpSession session) {
-		Customer loggedUser = new Customer((User) session.getAttribute("currentUser"));
+		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		Customer loggedUser = new Customer(user);
+		// Customer loggedUser = new Customer((User)
+		// session.getAttribute("currentUser"));
 		ModelAndView mav = new ModelAndView();
 		List<Schedule> schedules = customer.scheduleByUserId(loggedUser.getUserId());
 		session.setAttribute("scheduleList", schedules);
